@@ -8,8 +8,9 @@ function App() {
 
   return (
     <>
-      <p>Hi,\n
-      I'm Emir Chacra, a Chilean music producer, bassist, DJ, and digital audio researcher.</p>
+      <p>Hi</p>
+
+      <p>I'm Emir Chacra, a Chilean music producer, bassist, DJ, and digital audio researcher.</p>
 
       <p>My webpage is under construction :) But soon it'll be online and beautiful again.</p>
 
