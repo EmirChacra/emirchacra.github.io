@@ -1,3 +1,4 @@
+import LinkedButton from '../LinkedButton/LinkedButton';
 import './StandardCard.css';
 
 
@@ -16,9 +17,7 @@ function StandardCard() {
                 </div>
 
                 <div className='links-container'>
-                    <a href="#">Listen on Bandcamp</a>
-                    {/* <a href="#">Link 2</a>
-                    <a href="#">Link 3</a> */}
+                    <LinkedButton text="Listen on bandcamp" />
                 </div>
             </div>
         </section>

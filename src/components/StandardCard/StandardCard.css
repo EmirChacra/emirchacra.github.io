@@ -44,13 +44,7 @@
         .links-container
         {
             margin-top: 3rem;
-            a
-            {
-
-                color: var(--purple-color);
-                text-decoration: none;
-                font-weight: 500;
-            }
+            
         }
     }
 }
