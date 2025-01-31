@@ -16,18 +16,17 @@ function StandardCard(props) {
     return (
         <section className='section-container'>
             <img className='section-img' src={img} alt="img" />
-            <div className='description-container'>
+            <header className='header-container'>
                 <h3 className='title'>{title}</h3>
-                <div className='text-container'>
-                    {textSchema}
-                </div>
-                {
-                    links ? <div className='links-container'>
-                        <LinkedButton text={links.text} href={links.href} />
-                    </div> : null
-                }
-
+            </header>
+            <div className='text-container'>
+                {textSchema}
             </div>
+            {
+                links ? <div className='links-container'>
+                    <LinkedButton text={links.text} href={links.href} />
+                </div> : null
+            }
         </section>
     );
 }
