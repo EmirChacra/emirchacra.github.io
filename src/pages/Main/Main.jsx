@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer/footer";
 import StandardCard from "../../components/StandardCard/StandardCard";
 import Footer from "/src/components/footer/footer";
 import Bio from "./components/Bio";
