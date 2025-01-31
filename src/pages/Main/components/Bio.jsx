@@ -9,14 +9,12 @@ function Bio() {
             textAlign: 'justify',
           }}>
             <div style = {{fontSize: "40px"}}>
-            <b>BIO</b>
+            <h2>BIO</h2>
             </div>
             <p>
             I'm Emir Chacra, a music producer, bass player, and audio DSP developer from Chile.
-            </p>
-            <p>
             I'm currently pursuing a Ph.D. in Computer music at University of California, San Diego,
-            where I'm doing research on Digital Audio Effects for both VSTs and  hardware based on the Daisy Platform.
+            where I'm doing research on Digital Audio Effects for both VSTs and hardware.
             </p>
             <p>
             As monocromo, my music producer alias, I'm interested in merging latin-inspired rhythms
