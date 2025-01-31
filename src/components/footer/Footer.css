@@ -1,27 +1,16 @@
-footer
-{
-    display: flex;
-    align-items: start;
-    padding: 0rem 100rem;
+footer{
+    display: flex;  
+    flex-direction: column;
 
-    div
-    {
-        padding: 0 1rem;
-
-        .footer-title
-        {
-            margin-bottom: 0.2rem;
-            font-size: 1.5rem;
-        }
-
-        .footer-content
-        {
-            h4
-            {
-                margin-top: 2rem;
-
-            }
-        }
+    .footer-title{
+        margin-bottom: 0.2rem;
+        font-size: 1.5rem;
     }
 
+    .footer-content{
+        h4{
+            margin-top: 2rem;
+           
+        }
+    }
 }
