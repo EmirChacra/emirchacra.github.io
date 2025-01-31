@@ -2,23 +2,31 @@ import LinkedButton from '../LinkedButton/LinkedButton';
 import './StandardCard.css';
 
 
-function StandardCard() {
-    // const { img , title, links} = props;
+function StandardCard(props) {
+    const { img = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", title = "Sin titulo", texts = ["sin texto"], links } = props;
+
+    const textSchema = texts.map((text, index) => {
+        if (typeof text === "string") {
+            return <p key={index}>{text}</p>
+        } else {
+            return <p key={index}>{text.text}<a href={text.href}>{text.textRef}</a></p>
+        }
+    })
 
     return (
         <section className='section-container'>
-            <img className='section-img' src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="img" />
+            <img className='section-img' src={img} alt="img" />
             <div className='description-container'>
-                <h2 className='title'>Panoramas - mncrmo (LP, 2023)</h2>
+                <h2 className='title'>{title}</h2>
                 <div className='text-container'>
-                    <p>Self-realesed</p>
-                    <p>Producer, bass player, and mixing engineer as mncrmo</p>
-                    <p>Master engineer - <a href="#">Gabo Araya</a></p>
+                    {textSchema}
                 </div>
+                {
+                    links ? <div className='links-container'>
+                        <LinkedButton text={links.text} href={links.href} />
+                    </div> : null
+                }
 
-                <div className='links-container'>
-                    <LinkedButton text="Listen on bandcamp" />
-                </div>
             </div>
         </section>
     );
