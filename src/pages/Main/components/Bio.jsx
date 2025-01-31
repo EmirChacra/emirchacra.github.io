@@ -1,7 +1,7 @@
 import LinkedButton from '/src/components/LinkedButton/LinkedButton';
 import biopic from "/src/assets/biopic.jpg";
 import cvpdf from "/src/assets/cv.pdf";
-import "../Main.css";
+import "/src/components/sections.css";
 
 function Bio() {
     return ( 

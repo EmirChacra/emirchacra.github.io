@@ -1,6 +1,6 @@
 import LinkedButton from '/src/components/LinkedButton/LinkedButton';
 import cover from "/src/assets/earlyRiser_cover.jpg";
-import "../Main.css";
+import "/src/components/sections.css";
 
 function ReleaseHighlight() {
     return ( 

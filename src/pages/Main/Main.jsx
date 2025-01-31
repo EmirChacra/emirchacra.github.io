@@ -6,7 +6,7 @@ import './Main.css';
 
 function Main() {
     return (
-        <section className="main-container">
+        <section>
             <Bio/>
             <ReleaseHighlight/>
             <Footer/>
