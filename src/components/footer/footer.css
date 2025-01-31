@@ -1,14 +1,15 @@
 .footer-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 2rem 2rem 1rem 2rem;
 
     .title
     {
-    font-family: var(--secondary-font);
-    font-size: 2rem;
-    font-weight:500;
-    color: var(--purple-color);
+        text-align: left;
+        font-family: var(--secondary-font);
+        font-size: 2rem;
+        font-weight:500;
+        color: var(--purple-color);
     }
 
     .text-container
