@@ -17,7 +17,7 @@ function StandardCard(props) {
         <section className='section-container'>
             <img className='section-img' src={img} alt="img" />
             <div className='description-container'>
-                <h2 className='title'>{title}</h2>
+                <h3 className='title'>{title}</h3>
                 <div className='text-container'>
                     {textSchema}
                 </div>
