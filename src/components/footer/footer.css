@@ -1,0 +1,31 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title
+    {
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    font-weight:500;
+    color: var(--purple-color);
+    }
+
+    .text-container
+        {
+
+            p /*Qué es esta p?*/
+            {
+                text-align: justify;
+                font-family: var(--primary-font);
+                font-size: 1rem;
+                font-weight: 200;
+
+                a/*Qué es esta a?*/
+                {
+                    /* text-decoration: none; */
+                    color: var(--primary-color);
+                }
+            }
+        }
+}

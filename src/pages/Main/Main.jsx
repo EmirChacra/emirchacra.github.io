@@ -1,13 +1,15 @@
 import StandardCard from "../../components/StandardCard/StandardCard";
 import Bio from "./components/Bio";
+import ReleaseHighlight from "./components/ReleaseHighlight";
 import './Main.css';
 
 function Main() {
     return (
-        <div className="main-container">
-            <StandardCard />
-            <Bio />
-        </div>
+        <section className="main-container">
+            <Bio/>
+            <ReleaseHighlight/>
+            <br />
+        </section>
     );
 }
 
