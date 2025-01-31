@@ -1,9 +1,10 @@
 .main-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .section-container{
-    margin: 0rem 0rem;
+    margin: 0rem 1rem;
 
     .section-img
     {
@@ -13,13 +14,13 @@
 
     .description-container
     {
-        padding: 0rem 2rem;
+        padding: 0rem 1rem;
 
         .title
         {
             text-align: left; /*No funciona esta wea*/
             font-family: var(--secondary-font);
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight:bold;
             color: var(--purple-color);
         }
@@ -31,7 +32,7 @@
             {
                 text-align: justify;
                 font-family: var(--primary-font);
-                font-size: 1.5rem;
+                font-size: 1.1rem;
                 font-weight: 300;
 
                 a/*Qué es esta a?*/
@@ -45,7 +46,7 @@
         .links-container
         {
             /*This shit doesn't work*/
-            margin: 1rem 2rem 1rem 2rem;
+            margin: 0rem 1rem;
         }
 
     }
