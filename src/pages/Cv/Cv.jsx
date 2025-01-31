@@ -1,4 +1,4 @@
-import cvpdf from "/src/assets/cv.pdf"
+import cvpdf from "/src/assets/cv.pdf";
 
 function CV() {
     return ( 

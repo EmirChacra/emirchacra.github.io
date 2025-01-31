@@ -1,18 +1,15 @@
-import './Footer.css';
+import './footer.css';
 
-function Footer() {
-    return (
-        <footer className="footer">
-            <h3 className="footer-title">EMIR CHACRA</h3>
-            <section className="footer-content">
-                <h4>Academic inquiries:</h4>
-                <p>echacra@ucsd.edu</p>
-
-                <h4>Music inquiries:</h4>
-                <p>music@emirchacra.com</p>
-            </section>
-        </footer>
+function footer() {
+    return ( 
+        <section className="footer-container">
+            <h2 className="title">emir chacra</h2>
+            <div className="text-container">
+                <p>Academic inquiries: <a href="mailto:echacra@ucsd.edu">echacra@ucsd.edu</a></p>
+                <p>Music inquiries: <a href="mailto:music@emirchacra.com">music@emirchacra.com</a></p>
+            </div>
+        </section>
     );
 }
 
-export default Footer;
+export default footer;

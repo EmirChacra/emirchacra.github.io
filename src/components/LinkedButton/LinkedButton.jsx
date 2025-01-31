@@ -1,10 +1,11 @@
 import './LinkedButton.css';
 
 function LinkedButton(props) {
-    const { text, color = 'text-purple', href } = props;
-    return (
-        <a href={href} className={'button ' + color}>{text}</a>
-    );
+    const { link="#", text = "Button", color = "text-purple"} = props;
+
+    return ( 
+        <a href={link} target="_blank" className={'button ' + color }>{text}</a>
+     );
 }
 
 export default LinkedButton;
