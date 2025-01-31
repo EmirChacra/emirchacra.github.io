@@ -10,7 +10,7 @@ function Panoramas() {
                 <div className="text-container">
                     <p>Self-released.</p>
                     <p>Producer and mixing engineer as <i>monocromo</i>. Bass player as <i>Emir Chacra</i>.</p>
-                    <p>Master engineer - <a href="https://www.instagram.com/elgaboaraya/">Gabo Araya</a></p>
+                    <p>Master engineer - <a href="https://www.instagram.com/elgaboaraya/" target="_blank">Gabo Araya</a></p>
                 </div>  
             </div>
         

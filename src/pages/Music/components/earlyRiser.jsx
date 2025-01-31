@@ -10,7 +10,7 @@ function earlyRiser() {
                 <div className="text-container">
                     <p>Self-released.</p>
                     <p>Producer and mixing engineer as <i>monocromo</i>.</p>
-                    <p>Master engineer - <a href="https://holzmasters.com">Francisco Holzmann</a></p>
+                    <p>Master engineer - <a href="https://holzmasters.com" target="_blank">Francisco Holzmann</a></p>
                 </div>  
             </div>
         
