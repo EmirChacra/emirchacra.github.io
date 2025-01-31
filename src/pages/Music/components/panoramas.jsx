@@ -1,0 +1,28 @@
+import LinkedButton from '/src/components/LinkedButton/LinkedButton';
+import cover from "/src/assets/panoramas_cover.jpg";
+import "/src/components/sections.css";
+
+function Panoramas() {
+    return ( 
+        <section className="section-container">
+            <div className='description-container'>
+                <h2 className='title'>Panoramas - monocromo (LP, 2023)</h2>
+                <div className="text-container">
+                    <p>Self-released.</p>
+                    <p>Producer and mixing engineer as <i>monocromo</i>. Bass player as <i>Emir Chacra</i>.</p>
+                    <p>Master engineer - <a href="https://www.instagram.com/elgaboaraya/">Gabo Araya</a></p>
+                </div>  
+            </div>
+        
+            <div className="link-container">
+                <LinkedButton link="https://mncrmo.bandcamp.com/album/panoramas-ambientes-deluxe" text="Listen on Bandcamp"/>
+            </div>
+        
+            <br></br>
+        
+            <img className='section-img' src={cover} alt="Cover" />
+        </section>
+    );
+}
+
+export default Panoramas;
