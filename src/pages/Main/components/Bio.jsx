@@ -9,7 +9,7 @@ function Bio() {
             textAlign: 'justify',
           }}>
             <div style = {{fontSize: "40px"}}>
-            <b>BIO</b>
+            <h2>BIO</h2>
             </div>
             <p>
             I'm Emir Chacra, a music producer, bass player, and audio DSP developer from Chile.
