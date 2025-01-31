@@ -1,7 +1,6 @@
 .main-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .section-container{
     margin: 0rem 0rem;
@@ -18,6 +17,7 @@
 
         .title
         {
+            text-align: left; /*No funciona esta wea*/
             font-family: var(--secondary-font);
             font-size: 2.5rem;
             font-weight:bold;
@@ -45,7 +45,7 @@
         .links-container
         {
             /*This shit doesn't work*/
-            padding: 3rem 0rem;
+            margin: 1rem 2rem 1rem 2rem;
         }
 
     }
