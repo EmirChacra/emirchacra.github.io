@@ -1,6 +1,6 @@
-import Footer from "../../components/Footer/footer";
 import StandardCard from "../../components/StandardCard/StandardCard";
-import Footer from "/src/components/footer/footer";
+import Footer from "../../components/Footer/Footer";
+
 import Bio from "./components/Bio";
 import ReleaseHighlight from "./components/ReleaseHighlight";
 import './Main.css';
@@ -10,6 +10,7 @@ function Main() {
         <section>
             <Bio/>
             <ReleaseHighlight/>
+            <StandardCard></StandardCard>
             <Footer/>
         </section>
     );
