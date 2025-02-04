@@ -1,6 +1,6 @@
 import './footer.css';
 
-function footer() {
+function Footer() {
     return ( 
         <section className="footer-container">
             <h2 className="title">emir chacra</h2>
@@ -12,4 +12,4 @@ function footer() {
     );
 }
 
-export default footer;
+export default Footer;
