@@ -2,7 +2,7 @@ import LinkedButton from '/src/components/LinkedButton/LinkedButton';
 import cover from "/src/assets/earlyRiser_cover.jpg";
 import "/src/components/sections.css";
 
-function earlyRiser() {
+function EarlyRiser() {
     return ( 
         <section className="section-container">
             <div className='description-container'>
@@ -25,4 +25,4 @@ function earlyRiser() {
     );
 }
 
-export default earlyRiser;
+export default EarlyRiser;
