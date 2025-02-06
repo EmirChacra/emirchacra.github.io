@@ -8,13 +8,15 @@ import Home from "../Home/Home";
 
 function Main() {
     return (
-        <section style={{paddingLeft: '5px', paddingRight: '5px'}}>
-            <Home/>
-            <Bio/>
-            <ReleaseHighlight/>
-            <StandardCard></StandardCard>
-            <Footer/>
-        </section>
+        <>
+            <Home />
+            <section style={{ paddingLeft: '5px', paddingRight: '5px' }}>
+                <Bio />
+                <ReleaseHighlight />
+                <StandardCard></StandardCard>
+                <Footer />
+            </section>
+        </>
     );
 }
 
