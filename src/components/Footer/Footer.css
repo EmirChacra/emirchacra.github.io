@@ -1,6 +1,6 @@
 .footer-container{
-    margin: 0rem 0rem;
-    padding: 0rem 2rem;
+    margin: 0rem 1rem;
+    padding: 0rem 1rem;
 
     .title
     {
@@ -14,16 +14,15 @@
     .text-container
     {
 
-        p /*Qué es esta p?*/
+        p 
         {
-            text-align: justify;
+            text-align: left;
             font-family: var(--primary-font);
             font-size: 1.1rem;
             font-weight: 300;
 
-            a/*Qué es esta a?*/
+            a
             {
-                /* text-decoration: none; */
                 color: var(--primary-color);
             }
         }

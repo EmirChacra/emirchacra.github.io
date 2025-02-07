@@ -1,18 +1,17 @@
-import StandardCard from "../../components/StandardCard/StandardCard";
-import Footer from "../../components/Footer/Footer";
-
-import Bio from "./components/Bio";
-import ReleaseHighlight from "./components/ReleaseHighlight";
+import Footer from '../../components/Footer/Footer';
+import AboutMe from '../AboutMe/AboutMe';
+import CV from '../Cv/Cv';
+import Music from '../Music/Music';
 import './Main.css';
 
 function Main() {
     return (
-        <section>
-            <Bio/>
-            <ReleaseHighlight/>
-            <StandardCard></StandardCard>
-            <Footer/>
-        </section>
+        <div>
+        {/* <AboutMe/>
+        <Music/>
+        <Footer/> */}
+        <CV/>
+        </div>
     );
 }
 
