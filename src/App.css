@@ -5,3 +5,8 @@
   /* text-align: center; */
 }
 
+@media ( width >= 1200px){
+  #root{
+    max-width: 100%;
+  }
+}
