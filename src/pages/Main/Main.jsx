@@ -9,12 +9,6 @@ function Main() {
     return (
         <>
             <Home />
-            <section style={{ paddingLeft: '5px', paddingRight: '5px' }}>
-                <Bio />
-                <ReleaseHighlight />
-                <StandardCard></StandardCard>
-                <Footer />
-            </section>
         </>
     );
 }
