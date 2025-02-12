@@ -8,13 +8,17 @@ function Home() {
     // const containerHeight = window.innerHeight;
 
     const initialTags = [
-        { text: "about us", href: "#about" },
-        { text: "photos", href: "#photos" },
-        { text: "contact", href: "#contact" },
+        { text: "about me", href: "#about", width: 75, height: 18 },
+        { text: "photos", href: "#photos",  width: 75, height: 18  },
+        { text: "music", href: "#music",  width: 75, height: 18  },
+        { text: "cv", href: "#music", width: 75, height: 18 },
+        { text: "audio dsp", href: "#music", width: 75, height: 18  },
+
 
     ];
 
-    const generateRandomDirection = () => (Math.random() > 0.5 ? 0.2 : -0.2);   
+    const speed = -0.1;
+    const generateRandomDirection = () => (Math.random() > 0.5 ? Math.abs(speed) : speed);
 
     const [tags, setTags] = useState(
         initialTags.map((tag) => ({
@@ -22,7 +26,7 @@ function Home() {
             left: Math.random() * (window.innerWidth - 150),
             top: Math.random() * (window.innerHeight - 50),
             dx: generateRandomDirection(),
-            dy: generateRandomDirection()
+            dy: generateRandomDirection(),
         }))
     );
 
@@ -37,11 +41,16 @@ function Home() {
                     let newDx = tag.dx;
                     let newDy = tag.dy;
 
-                    // Rebote en los bordes
-                    if (newLeft <= 0 || newLeft >= window.innerWidth - 150) newDx *= -1;
-                    if (newTop <= 0 || newTop >= window.innerHeight - 50) newDy *= -1;
+                    // Obtiene el tamaño real del elemento
+                    const tagElement = document.getElementById(`tag-${tag.text}`);
+                    const width = tagElement ? tagElement.offsetWidth : tag.width;
+                    const height = tagElement ? tagElement.offsetHeight : tag.height;
 
-                    return { ...tag, left: newLeft, top: newTop, dx: newDx, dy: newDy };
+                    // Rebote en bordes
+                    if (newLeft <= 0 || newLeft + width >= window.innerWidth) newDx *= -1;
+                    if (newTop <= 0 || newTop + height >= window.innerHeight) newDy *= -1;
+
+                    return { ...tag, left: newLeft, top: newTop, dx: newDx, dy: newDy, width, height };
                 })
             );
 
@@ -65,6 +74,7 @@ function Home() {
                 <a
                     key={index}
                     href={tag.href}
+                    id={`tag-${tag.text}`}
                     className="tag"
                     style={{ top: tag.top, left: tag.left }}
                 >
