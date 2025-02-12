@@ -1,13 +1,57 @@
+import { useEffect, useState } from 'react';
 import './Home.css';
 // import logo from "../../assets/panoramas_cover.jpg";
 
 function Home() {
 
-    const tags = [
-        { text: "About Us", href: "/about", top: "20%", left: "30%" },
-        { text: "Photos", href: "/photos", top: "50%", left: "60%" },
-        { text: "Contact", href: "/contact", top: "75%", left: "40%" }
+    // const containerWidth = window.innerWidth;
+    // const containerHeight = window.innerHeight;
+
+    const initialTags = [
+        { text: "about us", href: "#about" },
+        { text: "photos", href: "#photos" },
+        { text: "contact", href: "#contact" },
+
     ];
+
+    const generateRandomDirection = () => (Math.random() > 0.5 ? 0.2 : -0.2);   
+
+    const [tags, setTags] = useState(
+        initialTags.map((tag) => ({
+            ...tag,
+            left: Math.random() * (window.innerWidth - 150),
+            top: Math.random() * (window.innerHeight - 50),
+            dx: generateRandomDirection(),
+            dy: generateRandomDirection()
+        }))
+    );
+
+    useEffect(() => {
+        let animationFrameId;
+
+        const moveTags = () => {
+            setTags((prevTags) =>
+                prevTags.map((tag) => {
+                    let newLeft = tag.left + tag.dx;
+                    let newTop = tag.top + tag.dy;
+                    let newDx = tag.dx;
+                    let newDy = tag.dy;
+
+                    // Rebote en los bordes
+                    if (newLeft <= 0 || newLeft >= window.innerWidth - 150) newDx *= -1;
+                    if (newTop <= 0 || newTop >= window.innerHeight - 50) newDy *= -1;
+
+                    return { ...tag, left: newLeft, top: newTop, dx: newDx, dy: newDy };
+                })
+            );
+
+            animationFrameId = requestAnimationFrame(moveTags);
+        };
+
+        animationFrameId = requestAnimationFrame(moveTags);
+
+        return () => cancelAnimationFrame(animationFrameId);
+    }, []);
 
     return (
         <div className="landing-container">
