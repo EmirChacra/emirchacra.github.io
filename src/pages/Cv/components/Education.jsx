@@ -1,10 +1,22 @@
 import "../../../styles/Sectionsv2.css";
+import React, { useState } from 'react';
 
 function Education() {
+
+    const [isContentVisible, setIsContentVisible] = useState(false);
+
+    const handleCollapsibleClick = () => {
+        setIsContentVisible(!isContentVisible);
+    };
+
     return ( 
         <section className="section-container">
-            <h3 className='subtitle'>education</h3>
+            
+            <h3 className={`collapsible ${isContentVisible ? 'active' : ''}`} onClick={handleCollapsibleClick}>
+                education
+            </h3>
 
+            <div className={`collapsible-content ${isContentVisible ? 'active' : ''}`}>
             <div className="text-container">
                 <ul>
                     <li>UC San Diego, Ph.D. in Computer Music (09/23 - Ongoing)</li>
@@ -22,7 +34,8 @@ function Education() {
                         </ul>
                     </li>
                 </ul>
-            </div>  
+            </div>
+            </div>
         </section>
     );
 }

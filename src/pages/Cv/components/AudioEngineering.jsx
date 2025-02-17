@@ -1,10 +1,22 @@
 import "../../../styles/Sectionsv2.css";
+import React, { useState } from 'react';
 
 function AudioEngineering() {
+
+    const [isContentVisible, setIsContentVisible] = useState(false);
+
+    const handleCollapsibleClick = () => {
+        setIsContentVisible(!isContentVisible);
+    };
+
     return ( 
         <section className="section-container">
-            <h3 className='subtitle'>audio engineering</h3>
 
+            <h3 className={`collapsible ${isContentVisible ? 'active' : ''}`} onClick={handleCollapsibleClick}>
+                audio engineering
+            </h3>
+
+            <div className={`collapsible-content ${isContentVisible ? 'active' : ''}`}>
             <div className="text-container">
                 <h4>As a producer</h4>
                 <ul>
@@ -21,6 +33,7 @@ function AudioEngineering() {
                     <li>Ambientes - monocromo (EP, Nov 2022)</li>
                     <li>Neonatología - monocromo (LP, Aug 2018)</li>
                 </ul>
+            </div>
             </div>
         </section>
     );

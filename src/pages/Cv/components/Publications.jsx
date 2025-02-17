@@ -1,10 +1,22 @@
 import "../../../styles/Sectionsv2.css";
+import React, { useState } from 'react';
 
 function Publications() {
+
+    const [isContentVisible, setIsContentVisible] = useState(false);
+    
+    const handleCollapsibleClick = () => {
+        setIsContentVisible(!isContentVisible);
+    };
+
     return ( 
         <section className="section-container">
-            <h3 className="subtitle">publications</h3>
 
+            <h3 className={`collapsible ${isContentVisible ? 'active' : ''}`} onClick={handleCollapsibleClick}>
+                publications
+            </h3>
+
+            <div className={`collapsible-content ${isContentVisible ? 'active' : ''}`}>
             <div className="text-container">
                 <h4>Peer-reviewed journal articles</h4>
                 <ol>
@@ -19,6 +31,7 @@ function Publications() {
                         Congress on Artificial Materials for Novel Wave Phenomena (Metamaterials), 2022, pp.
                         139-141.</li>
                 </ol>
+            </div>
             </div>
         </section>
     );
