@@ -1,13 +1,66 @@
+import { useEffect, useState } from 'react';
 import './Home.css';
 // import logo from "../../assets/panoramas_cover.jpg";
 
 function Home() {
 
-    const tags = [
-        { text: "About Us", href: "/about", top: "20%", left: "30%" },
-        { text: "Photos", href: "/photos", top: "50%", left: "60%" },
-        { text: "Contact", href: "/contact", top: "75%", left: "40%" }
+    // const containerWidth = window.innerWidth;
+    // const containerHeight = window.innerHeight;
+
+    const initialTags = [
+        { text: "about me", href: "#about", width: 75, height: 18 },
+        { text: "photos", href: "#photos",  width: 75, height: 18  },
+        { text: "music", href: "#music",  width: 75, height: 18  },
+        { text: "cv", href: "#music", width: 75, height: 18 },
+        { text: "audio dsp", href: "#music", width: 75, height: 18  },
+
+
     ];
+
+    const speed = -0.1;
+    const generateRandomDirection = () => (Math.random() > 0.5 ? Math.abs(speed) : speed);
+
+    const [tags, setTags] = useState(
+        initialTags.map((tag) => ({
+            ...tag,
+            left: Math.random() * (window.innerWidth - 150),
+            top: Math.random() * (window.innerHeight - 50),
+            dx: generateRandomDirection(),
+            dy: generateRandomDirection(),
+        }))
+    );
+
+    useEffect(() => {
+        let animationFrameId;
+
+        const moveTags = () => {
+            setTags((prevTags) =>
+                prevTags.map((tag) => {
+                    let newLeft = tag.left + tag.dx;
+                    let newTop = tag.top + tag.dy;
+                    let newDx = tag.dx;
+                    let newDy = tag.dy;
+
+                    // Obtiene el tamaño real del elemento
+                    const tagElement = document.getElementById(`tag-${tag.text}`);
+                    const width = tagElement ? tagElement.offsetWidth : tag.width;
+                    const height = tagElement ? tagElement.offsetHeight : tag.height;
+
+                    // Rebote en bordes
+                    if (newLeft <= 0 || newLeft + width >= window.innerWidth) newDx *= -1;
+                    if (newTop <= 0 || newTop + height >= window.innerHeight) newDy *= -1;
+
+                    return { ...tag, left: newLeft, top: newTop, dx: newDx, dy: newDy, width, height };
+                })
+            );
+
+            animationFrameId = requestAnimationFrame(moveTags);
+        };
+
+        animationFrameId = requestAnimationFrame(moveTags);
+
+        return () => cancelAnimationFrame(animationFrameId);
+    }, []);
 
     return (
         <div className="landing-container">
@@ -21,6 +74,7 @@ function Home() {
                 <a
                     key={index}
                     href={tag.href}
+                    id={`tag-${tag.text}`}
                     className="tag"
                     style={{ top: tag.top, left: tag.left }}
                 >
