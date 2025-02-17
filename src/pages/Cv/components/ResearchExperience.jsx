@@ -1,10 +1,22 @@
 import "../../../styles/Sectionsv2.css";
+import React, { useState } from 'react';
 
 function ResearchExperience() {
+
+    const [isContentVisible, setIsContentVisible] = useState(false);
+    
+    const handleCollapsibleClick = () => {
+        setIsContentVisible(!isContentVisible);
+    };
+
     return (  
         <section className="section-container">
-            <h3 className='subtitle'>research experience</h3>
 
+            <h3 className={`collapsible ${isContentVisible ? 'active' : ''}`} onClick={handleCollapsibleClick}>
+                research experience
+            </h3>
+
+            <div className={`collapsible-content ${isContentVisible ? 'active' : ''}`}>
             <div className="text-container">
                 <ul>
                     <li>INRIA Chile, R&D Engineer (03/23 - 08/23)
@@ -28,7 +40,8 @@ function ResearchExperience() {
                         </ul>
                     </li>
                 </ul>
-            </div>  
+            </div>
+            </div>
         </section>
     );
 }

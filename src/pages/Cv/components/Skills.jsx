@@ -1,10 +1,22 @@
 import "../../../styles/Sectionsv2.css";
+import React, { useState } from 'react';
 
 function Skills() {
+
+    const [isContentVisible, setIsContentVisible] = useState(false);
+    
+    const handleCollapsibleClick = () => {
+        setIsContentVisible(!isContentVisible);
+    };
+
     return ( 
         <section className="section-container">
-            <h3 className="subtitle">skills</h3>
 
+            <h3 className={`collapsible ${isContentVisible ? 'active' : ''}`} onClick={handleCollapsibleClick}>
+                skills
+            </h3>
+
+            <div className={`collapsible-content ${isContentVisible ? 'active' : ''}`}>
             <div className="text-container">
                 <h4>Programming languages</h4>
                 <ul>
@@ -27,6 +39,7 @@ function Skills() {
                     <li>French (Elementary proficiency)</li>
                     <li>Portuguese (Elementary proficiency)</li>
                 </ul>
+            </div>
             </div>
         </section>
     );

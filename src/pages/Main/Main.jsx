@@ -1,14 +1,12 @@
-import Footer from '../../components/Footer/Footer';
-import AboutMe from '../AboutMe/AboutMe';
-import CV from '../Cv/Cv';
-import Music from '../Music/Music';
 import './Main.css';
 import Home from "../Home/Home";
+import CV from "../Cv/Cv";
+import Music from "../Music/Music";
 
 function Main() {
     return (
         <>
-            <Home />
+            <Home/>
         </>
     );
 }

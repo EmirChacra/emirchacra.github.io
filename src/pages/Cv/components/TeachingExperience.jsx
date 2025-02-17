@@ -1,10 +1,21 @@
 import "../../../styles/Sectionsv2.css";
+import React, { useState } from 'react';
 
 function TeachingExperience() {
+
+    const [isContentVisible, setIsContentVisible] = useState(false);
+    
+    const handleCollapsibleClick = () => {
+        setIsContentVisible(!isContentVisible);
+    };
+
     return ( 
         <section className="section-container">
-            <h3 className='subtitle'>teaching experience</h3>
+            <h3 className={`collapsible ${isContentVisible ? 'active' : ''}`} onClick={handleCollapsibleClick}>
+                teaching experience
+            </h3>
 
+            <div className={`collapsible-content ${isContentVisible ? 'active' : ''}`}>
             <div className="text-container">
                 <h4>As an instructor</h4>
                     <ul>
@@ -35,6 +46,7 @@ function TeachingExperience() {
                     <ul>
                         <li>Talk and workshop: <i>What should I do to start designing software or hardware digital audio effects?</i>. Sound Department, Universidad de Chile (Dec 2024).</li>
                     </ul>
+            </div>
             </div>
         </section>
     );
