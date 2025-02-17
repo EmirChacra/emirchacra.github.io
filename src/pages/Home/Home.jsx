@@ -4,8 +4,8 @@ import './Home.css';
 
 function Home() {
 
-    // const containerWidth = window.innerWidth;
-    // const containerHeight = window.innerHeight;
+    const containerWidth = window.innerWidth;
+    const containerHeight = window.innerHeight;
 
     const initialTags = [
         { text: "about me", href: "#about", width: 75, height: 18 },
@@ -13,8 +13,6 @@ function Home() {
         { text: "music", href: "#music",  width: 75, height: 18  },
         { text: "cv", href: "#music", width: 75, height: 18 },
         { text: "audio dsp", href: "#music", width: 75, height: 18  },
-
-
     ];
 
     const speed = -0.1;
@@ -31,6 +29,7 @@ function Home() {
     );
 
     useEffect(() => {
+
         let animationFrameId;
 
         const moveTags = () => {
@@ -47,8 +46,8 @@ function Home() {
                     const height = tagElement ? tagElement.offsetHeight : tag.height;
 
                     // Rebote en bordes
-                    if (newLeft <= 0 || newLeft + width >= window.innerWidth) newDx *= -1;
-                    if (newTop <= 0 || newTop + height >= window.innerHeight) newDy *= -1;
+                    if (newLeft <= 0 || newLeft + width >= containerWidth) newDx *= -1;
+                    if (newTop <= 0 || newTop + height >= containerHeight) newDy *= -1;
 
                     return { ...tag, left: newLeft, top: newTop, dx: newDx, dy: newDy, width, height };
                 })
@@ -60,7 +59,7 @@ function Home() {
         animationFrameId = requestAnimationFrame(moveTags);
 
         return () => cancelAnimationFrame(animationFrameId);
-    }, []);
+    }, [containerWidth, containerHeight]);
 
     return (
         <div className="landing-container">
