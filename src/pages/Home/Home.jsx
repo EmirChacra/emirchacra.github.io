@@ -48,7 +48,7 @@ function Home() {
                     // Rebote en bordes
                     if (newLeft <= 0 || newLeft + width >= containerWidth) newDx *= -1;
                     if (newTop <= 0 || newTop + height >= containerHeight) newDy *= -1;
-
+                    
                     return { ...tag, left: newLeft, top: newTop, dx: newDx, dy: newDy, width, height };
                 })
             );
