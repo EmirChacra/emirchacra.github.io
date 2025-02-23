@@ -7,9 +7,6 @@ import MediaPlayer from '../../components/mediaPlayer/mediaPlayer';
 function Main() {
     return (
         <>
-            {/* <Home/> */}
-            <MediaPlayer/> 
-            
         </>
     );
 }
