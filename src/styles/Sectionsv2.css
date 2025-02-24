@@ -2,10 +2,12 @@
     margin: 0rem 1rem;
     padding: 0rem 1rem;
     max-width: 95%;
+    position:relative;
+    background: transparent;
 
     .img
     {
-        width: 20rem;
+        width: 15rem;
         border-radius: 1%;
     }
 
@@ -13,22 +15,23 @@
     {
         text-align: left;
         font-family: var(--primary-font);
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight:500;
         color: var(--purple-color);
+        transition: font-size 1s ease;
     }
 
     .subtitle
     {
         text-align: left;
         font-family: var(--primary-font);
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         font-weight: 500;
         color: var(--primary-color);
+        transition: font-size 1s ease;
     }
 
     .collapsible {
-        background-color: var(--background-color);
         cursor: pointer;
         width: 100%;
         outline: none;
@@ -38,9 +41,10 @@
 
         text-align: left;
         font-family: var(--primary-font);
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         font-weight: 500;
         color: var(--primary-color);
+        transition: font-size 1s ease;
     }
     
     .active, .collapsible:hover {
@@ -57,6 +61,12 @@
         max-height: 50rem;
     }
 
+    .flex-container{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+    }
+
     .text-container
     {
         color: var(--primary-color);
@@ -64,6 +74,7 @@
         font-family: var(--primary-font);
         font-size: 1.1rem;
         font-weight: 300;
+        transition: font-size 1s ease;
 
         h4
         {
@@ -78,35 +89,33 @@
 
         a
         {
-            color: var(--primary-color);
+            color: var(--purple-color);
         }
     }
 }
 
-@media (width <= 768px)
+@media (width > 768px)
 {
 
     .section-container{
-        margin: 0rem 0.5rem;
-        padding: 0rem 0.5rem;
     
         .img
         {
-            width: 15rem;
+            width: 20rem;
         }
     
         .title
         {
-            font-size: 1.7rem;
+            font-size: 2.0rem;
         }
     
         .subtitle
         {
-            font-size: 1.4rem;
+            font-size: 1.7rem;
         }
     
         .collapsible {
-            font-size: 1.4rem;
+            font-size: 1.7rem;
         }
         
         .active, .collapsible:hover {
@@ -120,12 +129,77 @@
     
         .text-container
         {
-            font-size: 0.8rem;
+            font-size: 1.4rem;
     
             h4
             {
-                font-size: 0.9rem;
-                font-weight: 500;
+                font-size: 1.5rem;
+            }
+    
+            b
+            {
+            }
+    
+            a
+            {
+            }
+        }
+    }  
+
+}
+
+@media (width > 1224px)
+{
+
+    .section-container{
+        .img
+        {
+            width: 25rem;
+        }
+    
+        .title
+        {
+            font-size: 2.3rem;
+        }
+    
+        .subtitle
+        {
+            font-size: 2.0rem;
+        }
+    
+        .collapsible {
+            font-size: 2.0rem;
+        }
+        
+        .active, .collapsible:hover {
+        }
+    
+        .collapsible-content {
+        }
+    
+        .collapsible.active + .collapsible-content {
+        }
+
+        .flex-container{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            height: 100dvh;
+
+            .text-container{
+                flex: 1;
+                max-width: 50%;
+            }
+        }
+    
+        .text-container
+        {
+            font-size: 1.7rem;
+    
+            h4
+            {
+                font-size: 1.8rem;
             }
     
             b

@@ -1,0 +1,16 @@
+.background-container{
+    position: absolute;
+    width: auto;
+    height: 100dvh;
+
+    background-color: var(--background-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+}

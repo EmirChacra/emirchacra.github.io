@@ -1,12 +1,13 @@
 import './Main.css';
-import Home from "../Home/Home";
+import Homev2 from "../Home/Homev2";
 import CV from "../Cv/Cv";
 import Music from "../Music/Music";
+import AboutMe from "../AboutMe/AboutMe";
 
 function Main() {
     return (
         <>
-            <Home/>
+            <CV/>
         </>
     );
 }
