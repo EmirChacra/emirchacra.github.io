@@ -1,11 +1,11 @@
+import { Outlet } from 'react-router'
 import './App.css'
-import Main from './pages/Main/Main'
 
 
 function App() {
 
   return (
-    <Main />
+    <Outlet/>
   )
 }
 

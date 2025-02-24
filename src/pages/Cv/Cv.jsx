@@ -17,14 +17,16 @@ import TeachingExperience from "./components/TeachingExperience";
 import AudioEngineering from "./components/AudioEngineering";
 import Bassist from "./components/Bassist";
 import Skills from "./components/Skills";
+import Collapsible from "../../components/Collapsible/Collapsible";
 
 function CV() {
-
-    // Array of background images
+  
+     // Array of background images
     const backgroundImages = [background1, background2, background3, background4, background5];
                 
     // Select a random background image on component mount
     const [bgImage, setBgImage] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
+    
     return (
         <div>
             <div
@@ -33,18 +35,30 @@ function CV() {
                      opacity: 0.1}}
             >   
             </div>
-            <section className="section-container">
-                <div className="text-container">
-                    <h2 className='title'>résumé / CV <LinkedButton link={cvpdf} text="Download pdf"/> </h2>
-
-                    <Education/>
-                    <ResearchExperience/>
-                    <Publications/>
-                    <TeachingExperience/>
-                    <AudioEngineering/>
-                    <Bassist/>
-                    <Skills/>
-                </div>
+        <section className="section-container">
+            <h2 className='title'>résumé / CV <LinkedButton link={cvpdf} text="Download pdf" />
+            </h2>
+            <Collapsible title={"Education"}>
+                <Education />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <ResearchExperience />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <Publications />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <TeachingExperience />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <AudioEngineering />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <Bassist />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <Skills />
+            </Collapsible>
         </section>
         </div>
     );
