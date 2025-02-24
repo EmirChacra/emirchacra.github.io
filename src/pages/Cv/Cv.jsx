@@ -8,20 +8,34 @@ import TeachingExperience from "./components/TeachingExperience";
 import AudioEngineering from "./components/AudioEngineering";
 import Bassist from "./components/Bassist";
 import Skills from "./components/Skills";
+import Collapsible from "../../components/Collapsible/Collapsible";
 
 function CV() {
-    return ( 
+    return (
         <section className="section-container">
-            <h2 className='title'>résumé / CV <LinkedButton link={cvpdf} text="Download pdf"/>
+            <h2 className='title'>résumé / CV <LinkedButton link={cvpdf} text="Download pdf" />
             </h2>
-
-            <Education/>
-            <ResearchExperience/>
-            <Publications/>
-            <TeachingExperience/>
-            <AudioEngineering/>
-            <Bassist/>
-            <Skills/>
+            <Collapsible title={"Education"}>
+                <Education />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <ResearchExperience />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <Publications />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <TeachingExperience />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <AudioEngineering />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <Bassist />
+            </Collapsible>
+            <Collapsible title={"Education"}>
+                <Skills />
+            </Collapsible>
         </section>
     );
 }

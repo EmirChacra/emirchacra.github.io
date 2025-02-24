@@ -1,7 +1,6 @@
 .section-container{
     margin: 0rem 1rem;
     padding: 0rem 1rem;
-    max-width: 95%;
 
     .img
     {
@@ -48,14 +47,11 @@
     }
 
     .collapsible-content {
-        max-height: 0; 
+        transition: height 0.5s ease-out;
         overflow: hidden;
-        transition: max-height 1.0s ease-in-out;
     }
 
-    .collapsible.active + .collapsible-content {
-        max-height: 50rem;
-    }
+    
 
     .text-container
     {
@@ -82,6 +78,7 @@
         }
     }
 }
+
 
 @media (width <= 768px)
 {
