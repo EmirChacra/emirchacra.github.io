@@ -1,0 +1,11 @@
+.musicSection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    padding: 20px;
+    gap: 20px;
+}
+
+.musicImages{
+    width: 100%; 
+    box-sizing: border-box; 
+}

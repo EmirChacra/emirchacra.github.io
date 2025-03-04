@@ -1,3 +1,5 @@
+import "./Music.css";
+
 import { useEffect, useState } from 'react';
 
 import "../../styles/Background.css";
@@ -7,32 +9,22 @@ import background3 from "../../assets/backgrounds/homeBackground3.jpg";
 import background4 from "../../assets/backgrounds/homeBackground4.jpg";
 import background5 from "../../assets/backgrounds/homeBackground5.jpg";
 
-import EarlyRiser from "./components/EarlyRiser";
-import Panoramas from "./components/Panoramas";
-import Ambientes from "./components/Ambientes";
-import Neonatologia from "./components/Neonatologia";
+import earlyRiser from "../../assets/earlyRiser_cover.jpg";
+import neonatologia from "../../assets/neonatologia_cover.jpg";
+import panoramas from "../../assets/panoramas_cover.jpg";
+import ambientes from "../../assets/ambientes_cover.jpg";
+
+const backgroundImages = [earlyRiser, neonatologia, panoramas, ambientes];
+
 
 function Music() {
-    // Array of background images
-    const backgroundImages = [background1, background2, background3, background4, background5];
-            
-    // Select a random background image on component mount
-    const [bgImage, setBgImage] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
+    
+    const images = backgroundImages.map( (image, index) => <img className='musicImages' key={index} src={image} ></img> )
 
     return ( 
-        <div>
-        <div
-            className="background-container"
-            style={{ backgroundImage: `url(${bgImage})`,
-                     opacity: 0.1}}
-        >   
-        </div>
-        
-        <EarlyRiser/>
-        <Panoramas/>
-        <Ambientes/>
-        <Neonatologia/>
-        </div>
+        <section className='musicSection'>
+           {images}
+        </section>
     );
 }
 
