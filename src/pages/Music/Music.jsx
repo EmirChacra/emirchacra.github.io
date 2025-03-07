@@ -8,26 +8,46 @@ import { useState } from "react";
 import ModalBase from "../../components/ModalBase/ModalBase.JSX";
 
 
-const backgroundImages = [earlyRiser, neonatologia, panoramas, ambientes];
+
 
 
 function Music() {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const dataEarlyRise = {
+        title: "Early Riser",
+        subtitle: "(LP, 2023)",
+        type: "Self released",
+        workers: [
+            { data: "Producer, bass player, and mixing engineer", by: "monocromo" },
+            { data: "Mastering engineer", by: "monocromo", link: "www.google.com" },
+        ],
+        links: [{ data: "Bandcamp", link: "www.google.com" }, { data: "Spotify", link: "www.google.com" }],
+        image: earlyRiser
+    }
 
-    const openModal = () => setIsModalOpen(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [dataToShow, setDataToShow] = useState(null);
+    const music = [dataEarlyRise];
+
+    const onClickAlbum = (data) => {
+        setIsModalOpen(true);
+        setDataToShow(data);
+    }
+
     const closeModal = () => setIsModalOpen(false);
 
-    const images = backgroundImages.map((image, index) => <img className='musicImages' key={index} src={image} onClick={openModal}></img>)
+
+
+    const albums = music.map((data, index) => <img className='musicImages' key={index} src={data.image} onClick={() => onClickAlbum(data)}></img>)
 
     return (
         <>
             <section className='musicSection'>
-                {images}
+                {albums}
             </section>
             {
                 isModalOpen &&
-                <ModalBase onClose={closeModal}>
+                <ModalBase onClose={closeModal} data={dataToShow}>
 
                 </ModalBase>
             }
@@ -36,3 +56,6 @@ function Music() {
 }
 
 export default Music;
+
+
+

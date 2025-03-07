@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./ModalBase.css";
 
-function ModalBase({ children, onClose }) {
+function ModalBase({ children, onClose, data }) {
     const modalRoot = document.getElementById("modal-root");
     const el = document.createElement("div");
 
     useEffect(() => {
+        console.log(data);  
         // Agregar el elemento al modal-root
         modalRoot.appendChild(el);
 
@@ -14,7 +15,7 @@ function ModalBase({ children, onClose }) {
         return () => {
             modalRoot.removeChild(el);
         };
-    }, [el, modalRoot]);
+    }, [el, modalRoot, data]);
 
     return ReactDOM.createPortal(
         <div className="modalDisplay">
