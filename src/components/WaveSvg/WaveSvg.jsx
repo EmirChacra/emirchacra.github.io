@@ -18,6 +18,9 @@ function WaveSvg() {
                 <motion.path
 
                     key={index}
+                    fill="#ff97fd" // set fill color
+                    stroke= "#ff97fd" // set stroke color
+                    strokeWidth="1.5"
                     d={`M${index * 4 + 2} ${12 - height / 2}v${height}`}
                     animate={{
                         d: [

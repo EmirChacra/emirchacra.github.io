@@ -11,13 +11,12 @@
 
     .landing-title
     {
-        color: var(--primary-color);
-        mix-blend-mode: difference;
+        color: var(--purple-color);
         position: absolute;
         margin: 2dvh 3dvh;
         font-family: var(--primary-font);
         font-size: 1.7rem;
-        font-weight: 500;
+        font-weight: 300;
         transition: font-size 1s ease;
     }
 
@@ -25,19 +24,19 @@
     {
         position: absolute;
         border-radius: 3px;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         text-decoration: none;
-        color: var(--primary-color-color);
+        color: var(--primary-color);
         mix-blend-mode: difference;
-        font-weight: 500;
+        font-weight: 300;
         transition: font-size 1s ease, color 0.2s ease;
     }
 
     .tag:hover
     {   
         font-size: 1.7rem;
-        color: var(--background-color);
-        mix-blend-mode: multiply;
+        color: var(--purple-color);
+        mix-blend-mode: normal;
     }
 }
 

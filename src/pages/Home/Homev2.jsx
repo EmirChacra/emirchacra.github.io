@@ -1,22 +1,36 @@
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router';
+import { motion } from "motion/react";
 import './Homev2.css';
 import "../../styles/Background.css"; 
-import background1 from "../../assets/backgrounds/homeBackground1.jpg";
-import background2 from "../../assets/backgrounds/homeBackground2.jpg";
-import background3 from "../../assets/backgrounds/homeBackground3.jpg";
-import background4 from "../../assets/backgrounds/homeBackground4.jpg";
-import background5 from "../../assets/backgrounds/homeBackground5.jpg";
+
+import hbg1 from "../../assets/backgrounds/h1.jpg";
+import hbg2 from "../../assets/backgrounds/h2.jpg";
+import hbg3 from "../../assets/backgrounds/h3.jpg";
+import wbg1 from "../../assets/backgrounds/w1.jpg";
+import wbg2 from "../../assets/backgrounds/w2.jpg";
+import wbg3 from "../../assets/backgrounds/w3.jpg";
+
+
 
 function Homev2() {
 
-    // Array of background images
-    const backgroundImages = [background1, background2, background3, background4, background5];
-    
-    // Select a random background image on component mount
-    const [bgImage, setBgImage] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
-
+    let backgroundImages;
     const [containerWidth, setContainerWidth] = useState(window.innerWidth);
     const [containerHeight, setContainerHeight] = useState(window.innerHeight);
+    
+    // Array of background images
+    if (containerHeight >= containerWidth)
+    {
+        backgroundImages = [hbg1, hbg2, hbg3];
+    }
+    else
+    {
+        backgroundImages = [wbg1, wbg2, wbg3];
+    }
+
+    // Select a random background image on component mount
+    const [bgImage, setBgImage] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
 
     const speed = 0.001;
     const generateRandomDirection = () => (Math.random() > 0.5 ? speed : -1.0 * speed);
@@ -24,11 +38,10 @@ function Homev2() {
 
     // Tags data
     const tagsData = [
-        { text: "about.me", href: "#about" },
-        { text: "photos", href: "#photos" },
-        { text: "music", href: "#music" },
-        { text: "cv", href: "#cv" },
-        { text: "audio.dsp", href: "#audiodsp" },
+        { text: "about.me", href: "/about" },
+        { text: "music", href: "/music" },
+        { text: "cv", href: "/cv" },
+        { text: "audio.dsp", href: "/audiodsp" },
     ];
 
     // Generate initialTags position over tags data
@@ -147,37 +160,39 @@ function Homev2() {
     };
 
     return (
-        <div>
-            <div
-            className="background-container"
-            style={{ backgroundImage: `url(${bgImage})`,
-                     opacity: 1.0}}
-            >   
-        </div>
-        <div 
-            className="landing-container"
-        >
-            <h1 className='landing-title'>emir chacra</h1>
+        <motion.div initial={{ opacity: 0}}
+                    animate={{ opacity: 1}}
+                    exit={{ opacity: 0 }}
+                    transition={{duration: 1.5}}>
 
-            {tags.map((tag, index) => (
-                <a
-                    key={index}
-                    href={tag.href}
-                    id={`tag-${tag.text}`}
-                    className="tag"
-                    style={{
-                        position: 'absolute',
-                        top: `${tag.top * containerHeight}px`, // Convert to pixel value
-                        left: `${tag.left * containerWidth}px`, // Convert to pixel value
-                    }}
-                    onMouseEnter={() => handleMouseEnter(index)}
-                    onMouseLeave={() => handleMouseLeave(index)}
-                >
-                    {tag.text}
-                </a>
-            ))}
-        </div>
-        </div>
+            <div className="background-container"
+                 style={{ backgroundImage: `url(${bgImage})`,
+                          opacity: 1.0}}
+            >   
+            </div>
+
+            <div className="landing-container">
+                <h1 className='landing-title'>emir chacra</h1>
+
+                {tags.map((tag, index) => (
+                    <NavLink
+                        key={index}
+                        to={tag.href}
+                        id={`tag-${tag.text}`}
+                        className="tag"
+                        style={{
+                            position: 'absolute',
+                            top: `${tag.top * containerHeight}px`, // Convert to pixel value
+                            left: `${tag.left * containerWidth}px`, // Convert to pixel value
+                        }}
+                        onMouseEnter={() => handleMouseEnter(index)}
+                        onMouseLeave={() => handleMouseLeave(index)}
+                    >
+                        {tag.text}
+                    </NavLink>
+                ))}
+            </div>
+        </motion.div>
     );
 }
 

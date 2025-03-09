@@ -1,24 +1,33 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App'
-import { BrowserRouter, Route, Routes } from "react-router";
-import Home from './pages/Home/Home';
-import MediaPlayer from './components/mediaPlayer/mediaPlayer';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App';
+import {Route, Routes, HashRouter} from "react-router";
+import { AnimatePresence } from "motion/react";
+import Homev2 from './pages/Home/Homev2';
+import AboutMe from './pages/AboutMe/AboutMe';
 import CV from './pages/Cv/Cv';
+import Music from './pages/Music/Music';
+import AudioDSP from './pages/AudioDSP/AudioDSP';
+import MediaPlayer from './components/MediaPlayer/MediaPlayer';
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <AnimatePresence mode={"wait"}>
+    <HashRouter>
       <Routes>
-        <Route path="/" element={<App />} >
-          <Route path='home' element={<Home />} />
-          <Route path='media' element={<MediaPlayer />} />
-          <Route path='cv' element={<CV />} />
+        <Route path="/" element={<App/>} >
+          <Route path='/' element={<Homev2/>} />
+          <Route path='about' element={<AboutMe/>} />
+          <Route path='cv' element={<CV/>} />
+          <Route path='music' element={<Music/>} />
+          <Route path='audiodsp' element={<AudioDSP/>} />
+          <Route path='media' element={<MediaPlayer/>} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
+    </AnimatePresence>
   </StrictMode>,
 )
