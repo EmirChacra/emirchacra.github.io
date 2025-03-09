@@ -1,8 +1,8 @@
 :root
 {
 
-  --primary-font: "Work Sans", serif;
-  --secondary-font: "Inter", serif;
+  --primary-font: "Kanit";
+  --secondary-font: "Work Sans", serif;
 
   --primary-color: #f0f0f0;
   --purple-color: #ff97fd;
@@ -25,5 +25,5 @@ body
 {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100dvh;
 }

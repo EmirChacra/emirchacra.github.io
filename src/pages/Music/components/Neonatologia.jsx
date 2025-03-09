@@ -1,5 +1,5 @@
 import LinkedButton from '../../../components/LinkedButton/LinkedButton';
-import cover from "../../../assets/neonatologia_cover.jpg";
+import cover from "../../../assets/album_covers/neonatologia_cover.jpg";
 import "../../../styles/Sectionsv2.css";
 
 function Neonatologia() {
@@ -15,7 +15,7 @@ function Neonatologia() {
                 <p>Composition and arrangement - Nuevalengua.</p>
                 <p>Recording, mixing, and master engineer - Ricardo Molina</p>
 
-                <LinkedButton link="https://open.spotify.com/album/7jekM7K0roSUXjj3njw3Yi?si=gJRbteo0Q5em1-h2GiqLNw" text="Listen on Spotify"/>
+                <p><LinkedButton link="https://open.spotify.com/album/7jekM7K0roSUXjj3njw3Yi?si=gJRbteo0Q5em1-h2GiqLNw" text="Listen on Spotify"/></p>
             </div>  
         
             <img className='img' src={cover} alt="Cover" />

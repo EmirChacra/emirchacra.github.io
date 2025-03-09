@@ -5,7 +5,7 @@ import reverb from "../../assets/audio_files/ReverbGuitar.wav";
 
 
 
-export default function MediaPlayer({ sound }) {
+export default function MediaPlayer({ sound, description }) {
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -22,13 +22,14 @@ export default function MediaPlayer({ sound }) {
     }
 
     return (
-        <>
+        <div className="button-text-container">
             <button className="player-container" onClick={handlePlay}>
-                {isPlaying ? <WaveSvg /> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" ><polygon points="6 3 20 12 6 21 6 3" /></svg>
+                {isPlaying ? <WaveSvg /> : <svg xmlns="http://www.w3.org/2000/svg" width="90%" height="90%" viewBox="0 0 24 24" fill="#ff97fd" stroke="#ff97fd" ><polygon points="6 3 20 12 6 21 6 3" /></svg>
                 }
             </button>
+            <p>{description}</p>
             <audio ref={audioRef} src={sound ? sound : reverb} onEnded={handlePlay}></audio>
-        </>
+        </div>
     )
 
 }

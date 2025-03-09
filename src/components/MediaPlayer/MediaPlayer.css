@@ -1,6 +1,43 @@
+.button-text-container {
+    display: flex;
+    align-items: center;/* Vertically align items */
+    gap: 1dvh;/* Add space between the button and text */
+    font-family: var(--primary-font);
+    color: var(--purple-color);
+    font-size: 1.1rem;
+    font-weight: 300;
+    transition: font-size 1s ease;
+}
+
 .player-container{
     position: relative;
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--background-color);
+    border: 0px;
+    transition: width 1s ease, height 1s ease;
+}
+
+@media (width > 768px)
+{
+    .button-text-container {
+        font-size: 1.4rem;
+    }
+
+    .player-container{
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media (width > 1224px)
+{
+    .button-text-container {
+        font-size: 1.7rem;
+    }
+
+    .player-container{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
 }

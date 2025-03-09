@@ -2,7 +2,7 @@
   "name": "emirchacra",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://emirchacra.github.io",
+  "homepage": "https://emirchacra.github.io./#",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
