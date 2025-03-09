@@ -2,7 +2,7 @@ import "./Music.css";
 
 import { useState } from "react";
 import ModalBase from "../../components/ModalBase/ModalBase.JSX";
-import { dataEarlyRise, dataNeonatologia } from "./helpers/data";
+import { dataAmbientes, dataEarlyRise, dataNeonatologia, dataPanoramas } from "./helpers/data";
 
 
 
@@ -14,7 +14,7 @@ function Music() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [dataToShow, setDataToShow] = useState(null);
-    const music = [dataEarlyRise, dataNeonatologia];
+    const music = [dataEarlyRise, dataNeonatologia, dataPanoramas, dataAmbientes];
 
     const onClickAlbum = (data) => {
         setIsModalOpen(true);

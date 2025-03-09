@@ -14,18 +14,20 @@
     position: absolute;
     width: 90%;
     height: 90%;
-    background-color: var(--background-color-secondary) ;
+    background-color: var(--background-color-secondary);
     margin: auto;
     top: 5%;
     left: 5%;
     border-radius: 10px;
 }
 
-.modalHeader{
+.modalHeader
+{
     display: flex;
     justify-content: flex-end;
-    
-    button{
+
+    button
+    {
         font-size: 30px;
         border-bottom-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -34,5 +36,29 @@
 
 .modalContent
 {
+    padding: 0px 20px;
+}
+
+
+@media (width > 708px)
+{
+    .modalContainer
+    {
+        width: 70%;
+        height: 70%;
+        top: 15%;
+        left: 15%;
+    }
+}
+
+@media (width > 1000px)
+{
+    .modalContainer
+    {
+        width: 60%;
+        height: 60%;
+        top: 20%;
+        left: 20%;
+    }
 
 }
