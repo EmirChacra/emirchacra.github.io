@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./ModalBase.css";
 
-function ModalBase({ children, onClose, data }) {
+function ModalBase({ onClose, data }) {
     const modalRoot = document.getElementById("modal-root");
     const el = document.createElement("div");
 
@@ -24,7 +24,7 @@ function ModalBase({ children, onClose, data }) {
                     <button onClick={onClose}>X</button>
                 </header>
                 <div className="modalContent" >
-                    {children}
+                    <h3>{data.title}</h3>
                 </div>
             </div>
         </div>,

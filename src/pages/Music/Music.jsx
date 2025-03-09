@@ -1,11 +1,8 @@
 import "./Music.css";
 
-import earlyRiser from "../../assets/earlyRiser_cover.jpg";
-import neonatologia from "../../assets/neonatologia_cover.jpg";
-import panoramas from "../../assets/panoramas_cover.jpg";
-import ambientes from "../../assets/ambientes_cover.jpg";
 import { useState } from "react";
 import ModalBase from "../../components/ModalBase/ModalBase.JSX";
+import { dataEarlyRise, dataNeonatologia } from "./helpers/data";
 
 
 
@@ -13,21 +10,11 @@ import ModalBase from "../../components/ModalBase/ModalBase.JSX";
 
 function Music() {
 
-    const dataEarlyRise = {
-        title: "Early Riser",
-        subtitle: "(LP, 2023)",
-        type: "Self released",
-        workers: [
-            { data: "Producer, bass player, and mixing engineer", by: "monocromo" },
-            { data: "Mastering engineer", by: "monocromo", link: "www.google.com" },
-        ],
-        links: [{ data: "Bandcamp", link: "www.google.com" }, { data: "Spotify", link: "www.google.com" }],
-        image: earlyRiser
-    }
+
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [dataToShow, setDataToShow] = useState(null);
-    const music = [dataEarlyRise];
+    const music = [dataEarlyRise, dataNeonatologia];
 
     const onClickAlbum = (data) => {
         setIsModalOpen(true);
@@ -43,13 +30,14 @@ function Music() {
     return (
         <>
             <section className='musicSection'>
-                {albums}
+                <h2 className="title">Music</h2>
+                <div className="albums">
+                    {albums}
+                </div>
             </section>
             {
                 isModalOpen &&
-                <ModalBase onClose={closeModal} data={dataToShow}>
-
-                </ModalBase>
+                <ModalBase onClose={closeModal} data={dataToShow}></ModalBase>
             }
         </>
     );
