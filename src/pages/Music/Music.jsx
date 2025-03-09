@@ -10,8 +10,6 @@ import { dataAmbientes, dataEarlyRise, dataNeonatologia, dataPanoramas } from ".
 
 function Music() {
 
-
-
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [dataToShow, setDataToShow] = useState(null);
     const music = [dataEarlyRise, dataNeonatologia, dataPanoramas, dataAmbientes];
