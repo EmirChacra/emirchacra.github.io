@@ -32,7 +32,7 @@ function Homev2() {
     // Select a random background image on component mount
     const [bgImage, setBgImage] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
 
-    const speed = 0.001;
+    const speed = 0.0005;
     const generateRandomDirection = () => (Math.random() > 0.5 ? speed : -1.0 * speed);
     const generateRandomPosition = () => 0.3 + 0.35 * Math.random();
 
@@ -167,7 +167,7 @@ function Homev2() {
 
             <div className="background-container"
                  style={{ backgroundImage: `url(${bgImage})`,
-                          opacity: 1.0}}
+                          opacity: 0.4}}
             >   
             </div>
 
