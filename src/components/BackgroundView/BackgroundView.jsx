@@ -42,13 +42,12 @@ function BackgroundView() {
         <div className="background-container"
             style={{
                 backgroundImage: `url(${bgImg})`,
-                backgroundRepeat: 'repeat-y',
-                backgroundSize: '100% auto',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
                 backgroundPosition: 'top center',
                 opacity: 0.2,
                 minHeight: '100dvh',
-                width: '100%',
-                position: 'fixed', 
+                position: 'fixed',
                 top: 0,
                 left: 0,
                 zIndex: -1,
