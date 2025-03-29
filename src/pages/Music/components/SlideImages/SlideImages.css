@@ -1,4 +1,31 @@
-.slide-images{
-    background-color: rgb(255, 0, 0);
-    height: 178px;
+
+.slide-images
+{
+    /* background-color: blueviolet; */
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+.swiper-wrapper{
+    height: 30%;
+}
+
+.swiper-slide{
+    margin: 0 auto;
+    
+    img{
+        display: block;
+        width: 50%;
+    }
+}
+
+.swiper-pagination{
+    /* margin-top: 100px; */
 }
