@@ -19,6 +19,9 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --port-view-m: 768px;
+  --port-view-l: 1224px;
+
 }
 
 body
