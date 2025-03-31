@@ -23,6 +23,11 @@ export const dataMusic = [
         text_linked: "Francisco Holzmann",
         link: "google.com",
       },
+      {
+        text: "Master engineer -",
+        text_linked: "Francisco Holzmann",
+        link: "google.com",
+      },
     ],
   },
   {

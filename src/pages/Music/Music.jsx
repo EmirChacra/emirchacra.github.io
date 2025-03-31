@@ -17,7 +17,9 @@ function Music() {
     return (
 
         <div className="music">
-            <InfoDisplay item={selectedCover} />
+            <div className="info-div-container">
+                <InfoDisplay item={selectedCover} />
+            </div>
             <SlideImages data={fullDataMusic} onSlideChange={onSlideChange} />
         </div>
 

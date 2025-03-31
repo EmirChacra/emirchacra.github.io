@@ -60,6 +60,7 @@
         img
         {
             width: 50%;
+            max-width: 290px;
             object-fit: cover;
         }
     }

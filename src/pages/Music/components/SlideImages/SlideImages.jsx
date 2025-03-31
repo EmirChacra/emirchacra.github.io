@@ -29,7 +29,7 @@ function SlideImages({ data, onSlideChange }) {
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
-                    depth: 200,
+                    depth: 400,
                     modifier: 1,
                     slideShadows: false,
                 }}
