@@ -19,7 +19,6 @@ function BackgroundView() {
     useEffect(() => {
         const now = paths.pathname.replace('/', '');
         setPath(now);
-        console.log(now)
     }, [paths.pathname]);
 
 
