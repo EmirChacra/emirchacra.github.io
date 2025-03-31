@@ -1,13 +1,10 @@
 import { Link } from "react-router";
-import earlyRiser from "../../../../assets/album_covers/earlyRiser_cover.jpg";
 import './InfoDisplay.css';
-import { useState } from "react";
 
-function InfoDisplay() {
+function InfoDisplay(item) {
 
-    const [element, setElement] = useState(infoExample[0]);
 
-    const showElement = (item) => {
+    const showElement = ({ item }) => {
         return (
             <>
                 <div className="content-info-display">
@@ -40,34 +37,9 @@ function InfoDisplay() {
 
     return (
         <div className="info-display">
-            {showElement(element)}
+            {showElement(item)}
         </div>
     );
 }
 
 export default InfoDisplay;
-
-const infoExample = [
-    {
-        img: earlyRiser,
-        title: 'early riser - monocromo (EP, 2024)',
-        text: [
-            {
-                text: 'self-released',
-                text_linked: '',
-                link: ''
-            },
-            {
-                text: 'Producer and mixing engineer as monocromo.',
-                text_linked: '',
-                link: ''
-            },
-            {
-                text: 'Master engineer -',
-                text_linked: 'Francisco Holzmann',
-                link: 'google.com'
-            }
-        ]
-
-    }
-]

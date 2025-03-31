@@ -4,33 +4,41 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import earlyRiser from "../../../../assets/album_covers/earlyRiser_cover.jpg";
 
-function SlideImages(data) {
+function SlideImages({ data, onSlideChange }) {
+    const showElements = () => {
+        return data.map((item, index) => {
+            return (
+                <SwiperSlide key={index}>
+                    <img src={item.img} alt="cover" />
+                </SwiperSlide>
+            )
+        })
+    }
+
     return (
         <div className="slide-images">
 
             <Swiper
                 modules={[EffectCoverflow, Pagination]}
                 spaceBetween={0}
-                slidesPerView={1}
+                loop={true}
+                slidesPerView={3}
                 effect={'coverflow'}
+                initialSlide={3}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
-                    depth: 100,
+                    depth: 200,
                     modifier: 1,
                     slideShadows: false,
                 }}
                 centeredSlides={'auto'}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-                pagination={{ clickable: true }}
+                onSlideChange={(swiper) => onSlideChange(swiper)}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // pagination={{ clickable: true }}
             >
-                <SwiperSlide><img src={earlyRiser} alt="cover" /></SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
+                {showElements()}
             </Swiper>
         </div >
     );
