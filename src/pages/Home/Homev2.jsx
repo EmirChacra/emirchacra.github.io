@@ -10,7 +10,7 @@ function Homev2() {
     const [containerWidth, setContainerWidth] = useState(window.innerWidth);
     const [containerHeight, setContainerHeight] = useState(window.innerHeight);
 
-    const speed = 0.001;
+    const speed = 0.0005;
     const generateRandomDirection = () => (Math.random() > 0.5 ? speed : -1.0 * speed);
     const generateRandomPosition = () => 0.3 + 0.35 * Math.random();
 

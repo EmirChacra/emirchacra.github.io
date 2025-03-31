@@ -5,12 +5,23 @@ import hbg3 from "../../assets/backgrounds/h3.jpg";
 import wbg1 from "../../assets/backgrounds/w1.jpg";
 import wbg2 from "../../assets/backgrounds/w2.jpg";
 import wbg3 from "../../assets/backgrounds/w3.jpg";
+import { useLocation } from "react-router";
 
 function BackgroundView() {
     let backgroundImages;
 
     const [containerWidth, setContainerWidth] = useState(window.innerWidth);
     const [containerHeight, setContainerHeight] = useState(window.innerHeight);
+
+    const paths = useLocation();
+    const [path, setPath] = useState('');
+
+    useEffect(() => {
+        const now = paths.pathname.replace('/', '');
+        setPath(now);
+        console.log(now)
+    }, [paths.pathname]);
+
 
     // Array of background images
     if (containerHeight >= containerWidth) {
@@ -45,7 +56,7 @@ function BackgroundView() {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'top center',
-                opacity: 0.2,
+                opacity: path === '' ? 0.5 : 0.1,
                 minHeight: '100dvh',
                 position: 'fixed',
                 top: 0,
