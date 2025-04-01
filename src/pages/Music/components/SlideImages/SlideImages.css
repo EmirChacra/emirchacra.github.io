@@ -1,0 +1,25 @@
+
+.slide-images
+{
+    /* background-color: blueviolet; */
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+.swiper-slide{
+    margin: 0 auto;
+    
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+
+
