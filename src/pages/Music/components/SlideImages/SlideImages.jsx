@@ -22,10 +22,10 @@ function SlideImages({ data, onSlideChange }) {
             <Swiper
                 modules={[EffectCoverflow, Pagination]}
                 spaceBetween={0}
-                loop={true}
+                loop={false}
                 slidesPerView={3}
                 effect={'coverflow'}
-                initialSlide={3}
+                initialSlide={0}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,

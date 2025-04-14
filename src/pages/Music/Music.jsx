@@ -6,7 +6,7 @@ import SlideImages from "./components/SlideImages/SlideImages";
 import './Music.css';
 
 function Music() {
-    const fullDataMusic = [...dataMusic, ...dataMusic];
+    const fullDataMusic = [...dataMusic];
     const [selectedCover, setSelectedCover] = useState(fullDataMusic[0]);
 
     const onSlideChange = (swiper) => {
@@ -17,10 +17,8 @@ function Music() {
     return (
 
         <div className="music">
-            <div className="info-div-container">
-                <InfoDisplay item={selectedCover} />
-            </div>
-            <SlideImages data={fullDataMusic} onSlideChange={onSlideChange} />
+            <InfoDisplay item={selectedCover}/>
+            <SlideImages data={fullDataMusic} onSlideChange={onSlideChange}/>
         </div>
 
     );
