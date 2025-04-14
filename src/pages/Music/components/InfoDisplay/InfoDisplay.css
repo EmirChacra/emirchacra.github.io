@@ -1,114 +1,150 @@
 .info-display
 {
-    margin: 0 10px;
-    border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.566);
-    padding: 10px;
+    margin: 0rem 1rem;
+    padding: 0rem 1rem;
+    height: 50dvh;
+    width: 80dvw;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1%;
     display: flex;
+    position:relative;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    gap: 20px;
     /* max-height: calc(100dvh - 260px); */
+
+    .img
+    {
+        width: 40%;
+        height: auto;
+        max-height: 95%;
+        object-fit: contain;
+        border-radius: 1%;
+        display: none;
+    }
 
     .content-info-display
     {
         display: flex;
         flex-direction: column;
-        align-items: start;
-        gap: 7px;
-        padding: 10px;
+        justify-items: center; 
+        width: 100%;
+        height: auto;
+        max-height: 95%;
+        object-fit: contain;
 
-        h3
+        .title
         {
-            margin: 2px 0px;
-            font-weight: 400;
-            font-size: 23px;
+            text-align: left;
+            font-family: var(--primary-font);
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--purple-color);
+            transition: font-size 1s ease;
         }
 
-        p
-        {
-            margin: 5px 0px;
-            font-weight: 300;
-            font-size: 20px;
+        .button-container{
+            display: flex;
+            flex-direction:row;
+            justify-content: center;
+            gap: 5dvh;
+        }
 
+        .text-container
+        {
+            object-fit: contain;
+            color: var(--primary-color);
+            flex-direction: column;
+            font-family: var(--primary-font);
+            font-size: 1.1rem;
+            font-weight: 200;
+            transition: font-size 1s ease;
+        
+            h4
+            {
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
+        
+            b
+            {
+                font-weight: 300;
+            }
+        
             a
             {
-                color: var(--primary-color);
-                text-decoration: none;
-                position: relative;
-
-                &::after
-                {
-                    content: "";
-                    width: 100%;
-                    height: 1px;
-                    background-color: var(--primary-color);
-                    display: inline-block;
-                    position: absolute;
-                    left: 0;
-                    bottom: -2px;
-                }
+                color: var(--purple-color);
             }
-        }
-
-    }
-
-    div
-    {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
-
-        img
-        {
-            width: 50%;
-            max-width: 400px;
-            object-fit: cover;
+        
         }
     }
 }
 
 @media (width > 768px)
 {
-    .info-display
-    {
-        max-height: 100%;
-        max-width: 1000px;
+
+    .info-display{
+
         flex-direction: row;
-        padding: 20px;
-   
-       
+        align-items: center;
+        justify-content: center;
+
+        height: 60dvh;
+        width: 90dvw;
+
+        .img
+        {
+            display: block;
+        }
 
         .content-info-display{
-            gap: 15px;
 
-            h3{
-                font-size: 27.2px;
-            }
-            p{
-                font-size: 22.4px;
-            }
-        }
-
-
-        div
-        {
-            &:nth-child(1){
-                flex: 8;
-            }
-            &:nth-child(2){
-                flex: 5;
-            }   
-    
-            img
+            width: 70%;
+        
+            .title
             {
-                width: 58%;
-                max-width: 400px;
-                object-fit: cover;
+                font-size: 2.1rem;
             }
-        }
-    }
+        
+            .text-container
+            {
+                font-size: 1.5rem;
+            
+                h4
+                {
+                    font-size: 1.6rem;
+                }
+            }
 
+        }
+    }  
+
+}
+
+@media (width > 1224px)
+{
+
+    .info-display{
+        
+        .content-info-display{
+        
+            .title
+            {
+                font-size: 2.4rem;
+            }
+        
+            .text-container
+            {
+                font-size: 1.8rem;
+            
+                h4
+                {
+                    font-size: 1.9rem;
+                }
+            }
+        
+        }
+    }  
 
 }
