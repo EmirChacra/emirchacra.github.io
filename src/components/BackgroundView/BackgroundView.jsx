@@ -8,10 +8,11 @@ import wbg3 from "../../assets/backgrounds/w3.jpg";
 import { useLocation } from "react-router";
 
 function BackgroundView() {
-    let backgroundImages;
 
     const [containerWidth, setContainerWidth] = useState(window.innerWidth);
     const [containerHeight, setContainerHeight] = useState(window.innerHeight);
+    const [bgImg, setBgImg] = useState(hbg1);
+    const [backgroundImages, setBackgroundImages] = useState(window.innerHeight >= window.innerWidth ? [hbg1, hbg2, hbg3] : [wbg1, wbg2, wbg3]);
 
     const paths = useLocation();
     const [path, setPath] = useState('');
@@ -20,18 +21,6 @@ function BackgroundView() {
         const now = paths.pathname.replace('/', '');
         setPath(now);
     }, [paths.pathname]);
-
-
-    // Array of background images
-    if (containerHeight >= containerWidth) {
-        backgroundImages = [hbg1, hbg2, hbg3];
-    }
-    else {
-        backgroundImages = [wbg1, wbg2, wbg3];
-    }
-
-    const bgImg = backgroundImages[Math.floor(Math.random() * backgroundImages.length)]
-
 
 
     useEffect(() => {
@@ -43,10 +32,29 @@ function BackgroundView() {
 
         window.addEventListener('resize', handleResize);
 
+        console.log(backgroundImages)
+        if (containerHeight >= containerWidth) {
+            if (backgroundImages[0] != hbg1) {
+                setBackgroundImages([hbg1, hbg2, hbg3]);
+                setBgImg(backgroundImages[Math.floor(Math.random() * backgroundImages.length)])
+            }
+        }
+        else {
+            if (backgroundImages[0] != wbg1) {
+                console.log('entro')
+                setBackgroundImages([wbg1, wbg2, wbg3]);
+                setBgImg(backgroundImages[Math.floor(Math.random() * backgroundImages.length)])
+            }
+
+        }
+
+
+
+
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [containerHeight, containerWidth, backgroundImages]);
 
     return (
         <div className="background-container"
