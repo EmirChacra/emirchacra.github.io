@@ -32,7 +32,7 @@ function BackgroundView() {
 
         window.addEventListener('resize', handleResize);
 
-        console.log(backgroundImages)
+
         if (containerHeight >= containerWidth) {
             if (backgroundImages[0] != hbg1) {
                 setBackgroundImages([hbg1, hbg2, hbg3]);
@@ -41,7 +41,7 @@ function BackgroundView() {
         }
         else {
             if (backgroundImages[0] != wbg1) {
-                console.log('entro')
+
                 setBackgroundImages([wbg1, wbg2, wbg3]);
                 setBgImg(backgroundImages[Math.floor(Math.random() * backgroundImages.length)])
             }
