@@ -22,7 +22,7 @@ function BackgroundView() {
         setPath(now);
     }, [paths.pathname]);
 
-
+    
     useEffect(() => {
         // Resize listener to update container width and height
         const handleResize = () => {
@@ -33,7 +33,7 @@ function BackgroundView() {
         window.addEventListener('resize', handleResize);
 
 
-        if (containerHeight >= containerWidth) {
+        if (containerHeight <= containerWidth) {
             if (backgroundImages[0] != hbg1) {
                 setBackgroundImages([hbg1, hbg2, hbg3]);
                 setBgImg(backgroundImages[Math.floor(Math.random() * backgroundImages.length)])
