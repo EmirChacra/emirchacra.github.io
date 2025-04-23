@@ -1,17 +1,25 @@
 .breadcrumb
 {
-    margin: 10px 15px;
+    margin: 2dvh 3dvh;
     font-size: 1.7rem;
-    p{
+
+    p
+    {
+        font-size: 1.7rem;
         font-weight: 300;
         color: var(--purple-color);
         margin: 0;
-        a{
+
+        a
+        {
             text-decoration: none;
             color: var(--purple-color);
             position: relative;
-            &:hover{
-                &::after {
+
+            &:hover
+            {
+                &::after
+                {
                     content: '';
                     position: absolute;
                     left: 0;
@@ -23,7 +31,9 @@
                     transition: transform 0.3s ease-in-out;
                 }
             }
-            &::after {
+
+            &::after
+            {
                 content: '';
                 position: absolute;
                 left: 0;
@@ -36,4 +46,37 @@
             }
         }
     }
+}
+
+
+@media (width > 768px)
+{
+    .breadcrumb
+    {
+
+        p
+        {
+            
+            font-size: 2rem;
+        }
+    }
+
+
+}
+
+
+
+@media (width > 1224px)
+{
+
+    .breadcrumb
+    {
+
+        p
+        {
+            font-size: 2.3rem;
+        }
+    }
+
+
 }
