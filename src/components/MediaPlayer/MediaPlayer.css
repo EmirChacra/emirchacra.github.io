@@ -1,15 +1,20 @@
-.button-text-container {
+.button-text-container
+{
     display: flex;
-    align-items: center;/* Vertically align items */
-    gap: 1dvh;/* Add space between the button and text */
+    align-items: center;
+    /* Vertically align items */
+    gap: 1dvh;
+    /* Add space between the button and text */
     font-family: var(--primary-font);
     color: var(--purple-color);
     font-size: 1.1rem;
     font-weight: 300;
     transition: font-size 1s ease;
+
 }
 
-.player-container{
+.player-container
+{
     position: relative;
     width: 2.5rem;
     height: 2.5rem;
@@ -18,13 +23,43 @@
     transition: width 1s ease, height 1s ease;
 }
 
+.description
+{
+    position: relative;
+}
+
+.description::before
+{
+    position: absolute;
+    content: "";
+    width: 97%;
+    height: 2px;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: 20;
+}
+
+.description::after
+{
+    position: absolute;
+    content: "";
+    width: var(--progress-width, 20%);
+    height: 2px;
+    left: 0;
+    top: 0;
+    background-color: var(--purple-color);
+    z-index: 21;
+}
+
 @media (width > 768px)
 {
-    .button-text-container {
+    .button-text-container
+    {
         font-size: 1.4rem;
     }
 
-    .player-container{
+    .player-container
+    {
         width: 3rem;
         height: 3rem;
     }
@@ -32,11 +67,13 @@
 
 @media (width > 1224px)
 {
-    .button-text-container {
+    .button-text-container
+    {
         font-size: 1.7rem;
     }
 
-    .player-container{
+    .player-container
+    {
         width: 3.5rem;
         height: 3.5rem;
     }
