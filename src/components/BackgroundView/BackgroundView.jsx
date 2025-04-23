@@ -22,7 +22,7 @@ function BackgroundView() {
         setPath(now);
     }, [paths.pathname]);
 
-    
+
     useEffect(() => {
         // Resize listener to update container width and height
         const handleResize = () => {
@@ -47,9 +47,6 @@ function BackgroundView() {
             }
 
         }
-
-
-
 
         return () => {
             window.removeEventListener('resize', handleResize);
