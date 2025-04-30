@@ -1,6 +1,6 @@
 .music
 {
-    height: calc(100dvh - 62px);
+    height: calc(100dvh - 100px);
     display: flex;
     flex-direction: column;
     align-items: center;

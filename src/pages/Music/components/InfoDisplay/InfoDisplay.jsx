@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import './InfoDisplay.css';
 
 function InfoDisplay(item) {
