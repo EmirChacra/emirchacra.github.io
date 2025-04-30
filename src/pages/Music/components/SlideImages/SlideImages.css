@@ -11,6 +11,10 @@
     width: 100%;
 }
 
+.img-slider{
+    border-radius: 3%;
+}
+
 .swiper-slide {
     opacity: 0.4;
 }
