@@ -9,6 +9,19 @@ function Homev2() {
 
     const [containerWidth, setContainerWidth] = useState(window.innerWidth);
     const [containerHeight, setContainerHeight] = useState(window.innerHeight);
+    
+    // Array of background images
+    if (containerHeight >= containerWidth)
+    {
+        backgroundImages = [hbg1, hbg2, hbg3];
+    }
+    else
+    {
+        backgroundImages = [wbg1, wbg2, wbg3];
+    }
+
+    // Select a random background image on component mount
+    const [bgImage, setBgImage] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
 
     const speed = 0.0005;
     const generateRandomDirection = () => (Math.random() > 0.5 ? speed : -1.0 * speed);
@@ -157,7 +170,6 @@ function Homev2() {
                 </NavLink>
             ))}
         </div>
-
     );
 }
 
