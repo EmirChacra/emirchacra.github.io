@@ -7,10 +7,8 @@ import biopic from "../../assets/biopic.jpg";
 function AboutMe() {
     return (
         <section className="section-container">
-
             <div className="flex-container">
                 <div className="text-container">
-                    <h2 className='title'>about.me</h2>
 
                     <p>I'm Emir Chacra, a music producer, bass player, and audio DSP developer from Chile.
                         I'm currently pursuing a Ph.D. in Computer music at University of California, San Diego,

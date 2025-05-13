@@ -1,7 +1,9 @@
 .breadcrumb
 {
-    margin: 2dvh 3dvh;
+    margin: 1dvh 2dvh;
+    padding: 1dvh 1dvh;
     font-size: 1.7rem;
+    height: 5dvh;
 
     p
     {

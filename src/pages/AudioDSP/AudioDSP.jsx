@@ -5,7 +5,6 @@ function AudioDSP() {
 
     return (
         <section className="section-container">
-            <h2 className='title'>audio.dsp</h2>
             <Reverb />
             <Reverb />
         </section>

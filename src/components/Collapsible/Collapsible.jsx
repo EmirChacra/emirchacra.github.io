@@ -11,8 +11,7 @@ function Collapsible({ children, title }) {
     };
 
     return (
-        <section className="section-container">
-
+        <div>
             <h3 className={`collapsible`} onClick={handleCollapsibleClick}>
                 {title}
             </h3>
@@ -25,7 +24,7 @@ function Collapsible({ children, title }) {
                     })
                 }
             </div>
-        </section>
+        </div>
     );
 }
 

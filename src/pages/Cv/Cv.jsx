@@ -17,8 +17,6 @@ function CV() {
     return (
         <>
             <section className="section-container">
-                <h2 className='title'>résumé / CV <LinkedButton link={cvpdf} text="Download pdf" />
-                </h2>
                 <Collapsible title={"Education"}>
                     <Education />
                 </Collapsible>

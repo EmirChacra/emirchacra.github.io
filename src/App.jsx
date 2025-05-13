@@ -14,7 +14,7 @@ function App() {
       transition={{ duration: 1.5 }}>
       <BackgroundView />
       <Breadcrumb />
-      <Outlet />
+      <Outlet/>
     </motion.div>
   )
 }

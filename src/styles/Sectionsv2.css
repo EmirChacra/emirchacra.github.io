@@ -1,14 +1,13 @@
 .section-container{
-    margin: 0rem 1rem;
-    padding: 0rem 1rem;
-    max-width: 95dvh;
+    margin: 1dvh 2dvh;
+    padding: 1dvh 1dvh;
     position:relative;
     background: transparent;
 
     .img
     {
-        width: 15rem;
-        border-radius: 1%;
+        width: 40dvh;
+        border-radius: 2%;
     }
 
     .title
@@ -18,16 +17,6 @@
         font-size: 1.8rem;
         font-weight: 300;
         color: var(--purple-color);
-        transition: font-size 1s ease;
-    }
-
-    .subtitle
-    {
-        text-align: left;
-        font-family: var(--primary-font);
-        font-size: 1.5rem;
-        font-weight: 300;
-        color: var(--primary-color);
         transition: font-size 1s ease;
     }
 
@@ -62,6 +51,7 @@
         display: flex;
         flex-direction:column;
         justify-content: center;
+        align-items: center;
     }
 
     .button-container{
@@ -105,7 +95,7 @@
     
         .img
         {
-            width: 20rem;
+            width: 50dvh;
         }
     
         .title
@@ -156,9 +146,10 @@
 {
 
     .section-container{
-        .img
+
+        .imgs
         {
-            width: 25rem;
+            width: 60dvh;
         }
     
         .title
@@ -189,7 +180,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
-            height: 100dvh;
+            height: 88dvh;
 
             .text-container{
                 flex: 1;

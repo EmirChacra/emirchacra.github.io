@@ -16,10 +16,10 @@ function Homev2() {
 
     // Tags data
     const tagsData = [
-        { text: "about.me", href: "/about" },
+        { text: "about.me", href: "/about.me" },
         { text: "music", href: "/music" },
         { text: "cv", href: "/cv" },
-        { text: "audio.dsp", href: "/audiodsp" },
+        { text: "audio.dsp", href: "/audio.dsp" },
     ];
 
     // Generate initialTags position over tags data
