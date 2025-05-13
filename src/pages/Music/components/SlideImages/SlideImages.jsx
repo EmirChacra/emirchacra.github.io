@@ -10,7 +10,7 @@ function SlideImages({ data, onSlideChange }) {
         return data.map((item, index) => {
             return (
                 <SwiperSlide key={index}>
-                    <img src={item.img} alt="cover" />
+                    <img className="img-slider" src={item.img} alt="cover" />
                 </SwiperSlide>
             )
         })

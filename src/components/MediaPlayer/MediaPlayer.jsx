@@ -3,10 +3,10 @@ import "./MediaPlayer.css"
 import WaveSvg from "../WaveSvg/WaveSvg";
 import reverb from "../../assets/audio_files/ReverbGuitar.wav";
 
-export default function MediaPlayer({ sound, description }) {
+export default function MediaPlayer({ sound, title }) {
     const audioRef = useRef(null);
+    const titleRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [progress, setProgress] = useState(0);
 
     function handlePlay() {
         if (!audioRef) return;
@@ -22,18 +22,23 @@ export default function MediaPlayer({ sound, description }) {
 
     useEffect(() => {
         const audio = audioRef.current;
-        if (!audio) return;
+        const title = titleRef.current;
+        if (!audio || !title) return;
 
         let animationFrameId;
 
         const updateProgress = () => {
-            if (!audio.paused) {
-                const duration = audio.duration;
-                const currentTime = audio.currentTime;
-                const progressPercentage = (currentTime / duration) * 100;
-                setProgress(progressPercentage);
-                animationFrameId = requestAnimationFrame(updateProgress);
-            }
+            const duration = audio.duration || 1;
+            const currentTime = audio.currentTime;
+            const progressPercentage = (currentTime / duration) * 100;
+
+            title.style.background = `linear-gradient(to right, #ff97fd ${progressPercentage}%, #f0f0f0 ${progressPercentage}%)`;
+            title.style.webkitBackgroundClip = "text";
+            title.style.backgroundClip = "text";
+            title.style.color = "transparent";
+            title.style.webkitTextFillColor = "transparent";
+
+            animationFrameId = requestAnimationFrame(updateProgress);
         };
 
         if (isPlaying) {
@@ -51,7 +56,7 @@ export default function MediaPlayer({ sound, description }) {
                 {isPlaying ? <WaveSvg /> : <svg xmlns="http://www.w3.org/2000/svg" width="90%" height="90%" viewBox="0 0 24 24" fill="#ff97fd" stroke="#ff97fd" ><polygon points="6 3 20 12 6 21 6 3" /></svg>
                 }
             </button>
-            <p className={isPlaying ? 'description' : ''} style={{ '--progress-width': `${progress}%` }}>{description}</p>
+            <p ref={titleRef} className="description">{title}</p>
             <audio ref={audioRef} src={sound ? sound : reverb} onEnded={handlePlay}></audio>
         </div>
     )
