@@ -15,8 +15,8 @@ function Reverb() {
             </div>
 
             <div className="button-container">
-            <MediaPlayer sound={reverbdrums} description={"Hear it on drums."}/>
-            <MediaPlayer sound={reverbguitar} description={"Hear it on guitar."}/>
+            <MediaPlayer sound={reverbdrums} title={"Hear it on drums."}/>
+            <MediaPlayer sound={reverbguitar} title={"Hear it on guitar."}/>
             </div>
         </div>
     );

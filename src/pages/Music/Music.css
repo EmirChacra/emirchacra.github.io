@@ -1,0 +1,9 @@
+.music
+{
+    height: calc(100dvh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10dvh;
+    justify-content: center;
+}

@@ -19,11 +19,14 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --port-view-m: 768px;
+  --port-view-l: 1224px;
+
 }
 
 body
 {
   margin: 0;
   min-width: 320px;
-  min-height: 100dvh;
+  min-height: calc(100dvh - 40.8px);
 }

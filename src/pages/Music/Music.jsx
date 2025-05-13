@@ -1,61 +1,29 @@
-import { useEffect, useState } from 'react';
-import { motion } from "motion/react";
-import "../../styles/Background.css";
+import { useState } from "react";
+import { dataMusic } from "../../helpers/dataMusic";
+import InfoDisplay from "./components/InfoDisplay/InfoDisplay";
+import SlideImages from "./components/SlideImages/SlideImages";
 
-import hbg1 from "../../assets/backgrounds/h1.jpg";
-import hbg2 from "../../assets/backgrounds/h2.jpg";
-import hbg3 from "../../assets/backgrounds/h3.jpg";
-import wbg1 from "../../assets/backgrounds/w1.jpg";
-import wbg2 from "../../assets/backgrounds/w2.jpg";
-import wbg3 from "../../assets/backgrounds/w3.jpg";
-
-import EarlyRiser from "./components/EarlyRiser";
-import Panoramas from "./components/Panoramas";
-import Ambientes from "./components/Ambientes";
-import Neonatologia from "./components/Neonatologia";
+import './Music.css';
 
 function Music() {
+    const fullDataMusic = [...dataMusic];
+    const [selectedCover, setSelectedCover] = useState(fullDataMusic[0]);
 
-    let backgroundImages;
-    const [containerWidth, setContainerWidth] = useState(window.innerWidth);
-    const [containerHeight, setContainerHeight] = useState(window.innerHeight);
-    
-    // Array of background images
-    if (containerHeight >= containerWidth)
-    {
-        backgroundImages = [hbg1, hbg2, hbg3];
-    }
-    else
-    {
-        backgroundImages = [wbg1, wbg2, wbg3];
+    const onSlideChange = (swiper) => {
+        const activeIndex = swiper.realIndex;
+        setSelectedCover(fullDataMusic[activeIndex]);
     }
 
-    // Select a random background image on component mount
-    const [bgImage, setBgImage] = useState(backgroundImages[Math.floor(Math.random() * backgroundImages.length)]);
+    return (
 
-    return ( 
-        <motion.div initial={{ opacity: 0}}
-                    animate={{ opacity: 1}}
-                    exit={{ opacity: 0 }}
-                    transition={{duration: 1.5}}>
-        <div
-            className="background-container"
-            style={{ backgroundImage: `url(${bgImage})`}}
-        >   
+        <div className="music">
+            <InfoDisplay item={selectedCover}/>
+            <SlideImages data={fullDataMusic} onSlideChange={onSlideChange}/>
         </div>
 
-        <section className="section-container">
-            <h2 className="title">music</h2>
-        </section>
-        
-        <EarlyRiser/>
-        <Panoramas/>
-        <Ambientes/>
-        <Neonatologia/>
-        <br></br>
-
-        </motion.div>
     );
 }
 
 export default Music;
+
+

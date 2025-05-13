@@ -1,21 +1,12 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router';
-import { motion } from "motion/react";
 import './Homev2.css';
-import "../../styles/Background.css"; 
-
-import hbg1 from "../../assets/backgrounds/h1.jpg";
-import hbg2 from "../../assets/backgrounds/h2.jpg";
-import hbg3 from "../../assets/backgrounds/h3.jpg";
-import wbg1 from "../../assets/backgrounds/w1.jpg";
-import wbg2 from "../../assets/backgrounds/w2.jpg";
-import wbg3 from "../../assets/backgrounds/w3.jpg";
+import "../../styles/Background.css";
 
 
 
 function Homev2() {
 
-    let backgroundImages;
     const [containerWidth, setContainerWidth] = useState(window.innerWidth);
     const [containerHeight, setContainerHeight] = useState(window.innerHeight);
     
@@ -38,10 +29,10 @@ function Homev2() {
 
     // Tags data
     const tagsData = [
-        { text: "about.me", href: "/about" },
+        { text: "about.me", href: "/about.me" },
         { text: "music", href: "/music" },
         { text: "cv", href: "/cv" },
-        { text: "audio.dsp", href: "/audiodsp" },
+        { text: "audio.dsp", href: "/audio.dsp" },
     ];
 
     // Generate initialTags position over tags data
@@ -54,7 +45,7 @@ function Homev2() {
     const [tags, setTags] = useState(
         initialTags.map((tag, index) => ({
             ...tag,
-            top:  initialTags[index].top,
+            top: initialTags[index].top,
             left: initialTags[index].left,
             dx: generateRandomDirection(),
             dy: generateRandomDirection(),
@@ -82,9 +73,9 @@ function Homev2() {
                 })
             );
         };
-        
+
         window.addEventListener('resize', handleResize);
-        
+
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -108,23 +99,20 @@ function Homev2() {
                     const height = tagElement ? tagElement.offsetHeight : tag.height;
 
                     // Rebote en bordes
-                    if (newLeft <= 0 || newLeft + width/containerWidth >= 1)
-                    {
+                    if (newLeft <= 0 || newLeft + width / containerWidth >= 1) {
                         newDx *= -1;
                     }
-                    if (newTop <= 0 || newTop + height/containerHeight >= 1)
-                    {
+                    if (newTop <= 0 || newTop + height / containerHeight >= 1) {
                         newDy *= -1;
                     }
 
                     //Detiene cuando hover
-                    if (tag.hovering)
-                    {
+                    if (tag.hovering) {
                         newDx *= 0.9;
                         newDy *= 0.9;
                     }
-                    
-                    return { ...tag,left: newLeft, top: newTop, dx: newDx, dy: newDy};
+
+                    return { ...tag, left: newLeft, top: newTop, dx: newDx, dy: newDy };
                 })
             );
 
@@ -140,59 +128,48 @@ function Homev2() {
     const handleMouseEnter = (index) => {
         setTags((prevTags) =>
             prevTags.map((tag, i) =>
-            i === index ? { ...tag, hovering: true } : tag
+                i === index ? { ...tag, hovering: true } : tag
             )
         );
     };
-  
+
     // Handle mouse leave to restore the last known speed
     const handleMouseLeave = (index) => {
         setTags((prevTags) =>
             prevTags.map((tag, i) =>
-            i === index ? { ...tag,
-                            hovering: false,
-                            dx: generateRandomDirection(),
-                            dy: generateRandomDirection()
-                          } 
-                          : tag
+                i === index ? {
+                    ...tag,
+                    hovering: false,
+                    dx: generateRandomDirection(),
+                    dy: generateRandomDirection()
+                }
+                    : tag
             )
         );
     };
 
     return (
-        <motion.div initial={{ opacity: 0}}
-                    animate={{ opacity: 1}}
-                    exit={{ opacity: 0 }}
-                    transition={{duration: 1.5}}>
+        <div className="landing-container">
+            <h1 className='landing-title'>emir chacra</h1>
 
-            <div className="background-container"
-                 style={{ backgroundImage: `url(${bgImage})`,
-                          opacity: 0.4}}
-            >   
-            </div>
-
-            <div className="landing-container">
-                <h1 className='landing-title'>emir chacra</h1>
-
-                {tags.map((tag, index) => (
-                    <NavLink
-                        key={index}
-                        to={tag.href}
-                        id={`tag-${tag.text}`}
-                        className="tag"
-                        style={{
-                            position: 'absolute',
-                            top: `${tag.top * containerHeight}px`, // Convert to pixel value
-                            left: `${tag.left * containerWidth}px`, // Convert to pixel value
-                        }}
-                        onMouseEnter={() => handleMouseEnter(index)}
-                        onMouseLeave={() => handleMouseLeave(index)}
-                    >
-                        {tag.text}
-                    </NavLink>
-                ))}
-            </div>
-        </motion.div>
+            {tags.map((tag, index) => (
+                <NavLink
+                    key={index}
+                    to={tag.href}
+                    id={`tag-${tag.text}`}
+                    className="tag"
+                    style={{
+                        position: 'absolute',
+                        top: `${tag.top * containerHeight}px`, // Convert to pixel value
+                        left: `${tag.left * containerWidth}px`, // Convert to pixel value
+                    }}
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={() => handleMouseLeave(index)}
+                >
+                    {tag.text}
+                </NavLink>
+            ))}
+        </div>
     );
 }
 

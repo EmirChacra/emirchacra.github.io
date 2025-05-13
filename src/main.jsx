@@ -20,10 +20,10 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App/>} >
           <Route path='/' element={<Homev2/>} />
-          <Route path='about' element={<AboutMe/>} />
+          <Route path='about.me' element={<AboutMe/>} />
           <Route path='cv' element={<CV/>} />
           <Route path='music' element={<Music/>} />
-          <Route path='audiodsp' element={<AudioDSP/>} />
+          <Route path='audio.dsp' element={<AudioDSP/>} />
           <Route path='media' element={<MediaPlayer/>} />
         </Route>
       </Routes>

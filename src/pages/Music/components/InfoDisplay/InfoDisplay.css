@@ -1,0 +1,151 @@
+.info-display
+{
+    margin: 0rem 1rem;
+    padding: 0rem 1rem;
+    height: 50dvh;
+    width: 80dvw;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1%;
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* max-height: calc(100dvh - 260px); */
+
+    .img
+    {
+        width: 40%;
+        height: auto;
+        max-height: 95%;
+        object-fit: contain;
+        border-radius: 1%;
+        display: none;
+    }
+
+    .content-info-display
+    {
+        display: flex;
+        flex-direction: column;
+        justify-items: center; 
+        width: 100%;
+        height: auto;
+        max-height: 95%;
+        object-fit: contain;
+
+        .title
+        {
+            text-align: left;
+            font-family: var(--primary-font);
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--purple-color);
+            transition: font-size 1s ease;
+        }
+
+        .button-container{
+            display: flex;
+            flex-direction:row;
+            justify-content: center;
+            gap: 5dvh;
+        }
+
+        .text-container
+        {
+            object-fit: contain;
+            color: var(--primary-color);
+            flex-direction: column;
+            font-family: var(--primary-font);
+            font-size: 1.1rem;
+            font-weight: 200;
+            transition: font-size 1s ease;
+        
+            h4
+            {
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
+        
+            b
+            {
+                font-weight: 300;
+            }
+        
+            a
+            {
+                color: var(--purple-color);
+            }
+        
+        }
+    }
+}
+
+@media (width > 768px)
+{
+
+    .info-display{
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        height: 60dvh;
+        width: 90dvw;
+
+        .img
+        {
+            display: block;
+        }
+
+        .content-info-display{
+
+            width: 70%;
+        
+            .title
+            {
+                font-size: 2.1rem;
+            }
+        
+            .text-container
+            {
+                font-size: 1.5rem;
+            
+                h4
+                {
+                    font-size: 1.6rem;
+                }
+            }
+
+        }
+    }  
+
+}
+
+@media (width > 1224px)
+{
+
+    .info-display{
+        max-width: 75%;
+        
+        .content-info-display{
+        
+            .title
+            {
+                font-size: 2.4rem;
+            }
+        
+            .text-container
+            {
+                font-size: 1.8rem;
+            
+                h4
+                {
+                    font-size: 1.9rem;
+                }
+            }
+        
+        }
+    }  
+
+}
