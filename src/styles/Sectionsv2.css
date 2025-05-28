@@ -7,7 +7,7 @@
     .img
     {
         width: 40dvh;
-        border-radius: 2%;
+        border-radius: 1%;
     }
 
     .title
@@ -147,7 +147,7 @@
 
     .section-container{
 
-        .imgs
+        .img
         {
             width: 60dvh;
         }

@@ -3,8 +3,6 @@ import { NavLink } from 'react-router';
 import './Homev2.css';
 import "../../styles/Background.css";
 
-
-
 function Homev2() {
 
     const [containerWidth, setContainerWidth] = useState(window.innerWidth);

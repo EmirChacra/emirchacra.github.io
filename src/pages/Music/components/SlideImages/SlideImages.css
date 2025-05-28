@@ -1,14 +1,8 @@
 .slide-images
 {
-    /* background-color: blueviolet; */
-    /* border: 1px solid black; */
-    margin: 0 auto;
-    margin-bottom: 10px;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    max-width: 60dvw;
 }
 
 .img-slider{
@@ -16,12 +10,17 @@
 }
 
 .swiper-slide {
-    opacity: 0.4;
+    filter: brightness(20%);
+
+    img {
+        display: block;
+        width: 100%;
+    }
 }
 
 .swiper-slide-active
 {
-    opacity: 1 !important;
+    filter: brightness(100%) !important;
 }
 
 .swiper-slide
@@ -40,10 +39,15 @@
 
     .slide-images
     {
-        max-width: 350px;
+        max-width: 40dvw;
     }
 
 }
 
 @media (width > 1224px)
-{}
+{
+    .slide-images
+    {
+        max-width: 25dvw;
+    }
+}

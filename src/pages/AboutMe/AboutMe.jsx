@@ -1,5 +1,4 @@
 import LinkedButton from '../../components/LinkedButton/LinkedButton';
-import "../../styles/Background.css";
 import "../../styles/Sectionsv2.css";
 import cvpdf from "../../assets/cv.pdf";
 import biopic from "../../assets/biopic.jpg";
