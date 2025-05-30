@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
+import { AnimatePresence, motion } from "motion/react";
 import hbg1 from "../../assets/backgrounds/h1.jpg";
 import hbg2 from "../../assets/backgrounds/h2.jpg";
 import hbg3 from "../../assets/backgrounds/h3.jpg";
 import wbg1 from "../../assets/backgrounds/w1.jpg";
 import wbg2 from "../../assets/backgrounds/w2.jpg";
 import wbg3 from "../../assets/backgrounds/w3.jpg";
-import { useLocation } from "react-router";
 
 function BackgroundView() {
 
@@ -66,7 +67,8 @@ function BackgroundView() {
                 top: 0,
                 left: 0,
                 zIndex: -1,
-                overflow: 'hidden'
+                overflow: 'hidden',
+                transition: 'opacity 1.5s ease'
             }}
         >
         </div>

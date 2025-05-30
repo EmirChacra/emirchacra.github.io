@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import {Route, Routes, HashRouter} from "react-router";
-import { AnimatePresence } from "motion/react";
 import Homev2 from './pages/Home/Homev2';
 import AboutMe from './pages/AboutMe/AboutMe';
 import CV from './pages/Cv/Cv';
@@ -15,7 +14,7 @@ import MediaPlayer from './components/MediaPlayer/MediaPlayer';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AnimatePresence mode={"wait"}>
+    
     <HashRouter>
       <Routes>
         <Route path="/" element={<App/>} >
@@ -28,6 +27,5 @@ createRoot(document.getElementById('root')).render(
         </Route>
       </Routes>
     </HashRouter>
-    </AnimatePresence>
   </StrictMode>,
 )
