@@ -2,9 +2,11 @@ import LinkedButton from '../../components/LinkedButton/LinkedButton';
 import "../../styles/Sectionsv2.css";
 import cvpdf from "../../assets/cv.pdf";
 import biopic from "../../assets/biopic.jpg";
+import Fade from "../../components/Fade/Fade"
 
 function AboutMe() {
     return (
+        <Fade>
         <section className="section-container">
             <div className="flex-container">
                 <div className="text-container">
@@ -24,6 +26,7 @@ function AboutMe() {
                 <img className='img' src={biopic} alt="Bio Pic" />
             </div>
         </section>
+        </Fade>
     );
 }
 

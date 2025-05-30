@@ -4,7 +4,6 @@ function Fade({children}) {
     return (  
     <AnimatePresence mode="wait">
     <motion.div
-    key={paths.pathname}
     initial={{ opacity: 0 }} 
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}

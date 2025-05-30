@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router';
 import './Homev2.css';
 import "../../styles/Background.css";
+import Fade from "../../components/Fade/Fade"
 
 
 function Homev2() {
@@ -135,6 +136,7 @@ function Homev2() {
     };
 
     return (
+        <Fade>
         <div className="landing-container">
             <h1 className='landing-title'>emir chacra</h1>
 
@@ -156,6 +158,7 @@ function Homev2() {
                 </NavLink>
             ))}
         </div>
+        </Fade>
     );
 }
 
