@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router';
+import { motion } from 'framer-motion';
 import './Homev2.css';
 import "../../styles/Background.css";
-import Fade from "../../components/Fade/Fade"
 
 
 function Homev2() {
@@ -136,8 +136,14 @@ function Homev2() {
     };
 
     return (
-        <Fade>
-        <div className="landing-container">
+        <motion.div
+            className="landing-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+            style={{ height: '100vh', overflow: 'hidden' }}
+        >
             <h1 className='landing-title'>emir chacra</h1>
 
             {tags.map((tag, index) => (
@@ -157,8 +163,7 @@ function Homev2() {
                     {tag.text}
                 </NavLink>
             ))}
-        </div>
-        </Fade>
+        </motion.div>
     );
 }
 

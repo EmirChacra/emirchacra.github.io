@@ -2,12 +2,17 @@ import LinkedButton from '../../components/LinkedButton/LinkedButton';
 import "../../styles/Sectionsv2.css";
 import cvpdf from "../../assets/cv.pdf";
 import biopic from "../../assets/biopic.jpg";
-import Fade from "../../components/Fade/Fade"
+import { motion } from 'framer-motion';
 
 function AboutMe() {
     return (
-        <Fade>
-        <section className="section-container">
+        <motion.section
+            className="section-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+        >
             <div className="flex-container">
                 <div className="text-container">
 
@@ -25,8 +30,7 @@ function AboutMe() {
 
                 <img className='img' src={biopic} alt="Bio Pic" />
             </div>
-        </section>
-        </Fade>
+        </motion.section>
     );
 }
 
