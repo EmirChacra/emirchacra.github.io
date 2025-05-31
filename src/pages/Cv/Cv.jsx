@@ -1,9 +1,6 @@
 import "../../styles/Sectionsv2.css";
-import "../../styles/Background.css";
-
 
 import cvpdf from "../../assets/cv.pdf";
-import LinkedButton from "../../components/LinkedButton/LinkedButton";
 import Education from "./components/Education";
 import ResearchExperience from "./components/ResearchExperience";
 import Publications from "./components/Publications";
@@ -16,7 +13,7 @@ import Collapsible from "../../components/Collapsible/Collapsible";
 function CV() {
     return (
         <>
-            <section className="section-container">
+            <section className="section-container" style={{ padding: "1dvh 15dvh" }}>
                 <Collapsible title={"Education"}>
                     <Education />
                 </Collapsible>

@@ -1,4 +1,3 @@
-import "../../styles/Background.css";
 import Reverb from "./components/Reverb";
 
 function AudioDSP() {

@@ -21,7 +21,8 @@ export const dataMusic = [
     description: (
       <div className="text-container">
         <p>Self-released.</p>
-        <p>Producer and mixing engineer as <i>monocromo</i>. Bass player as <i>Emir Chacra</i>.</p>
+        <p>Producer and mixing engineer as <i>monocromo</i>.</p>
+        <p> Bass player as <i>Emir Chacra</i></p>
         <p>Master engineer - <a href="https://www.instagram.com/elgaboaraya/">Gabo Araya</a></p>
       </div>
     )
@@ -32,7 +33,8 @@ export const dataMusic = [
     description: (
       <div className="text-container">
         <p>Self-released.</p>
-        <p>Producer and mixing engineer as <i>monocromo</i>. Bass player as <i>Emir Chacra</i>.</p>
+        <p>Producer and mixing engineer as <i>monocromo</i>.</p>
+        <p> Bass player as <i>Emir Chacra</i></p>
         <p>Master engineer - <a href="https://www.instagram.com/elgaboaraya/">Gabo Araya</a></p>
       </div>
     )
@@ -43,7 +45,8 @@ export const dataMusic = [
     description: (
       <div className="text-container">
         <p>Self-released.</p>
-        <p>Co-producer and bass player as <i>Emir Chacra</i>. Composition and arrangement - Nuevalengua.</p>
+        <p>Co-producer and bass player as <i>Emir Chacra</i>.</p>
+        <p>Composition and arrangement - Nuevalengua.</p>
         <p>Recording, mixing, and master engineer - Ricardo Molina</p>
       </div>
     )
