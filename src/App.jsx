@@ -7,6 +7,7 @@ import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
 function App() {
   const [isExiting, setIsExiting] = useState(false);
   const [nextUrl, setNextUrl] = useState(null);
+  const [hasLoaded, setHasLoaded] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -14,6 +15,11 @@ function App() {
     setNextUrl(url);
     setIsExiting(true);
   };
+
+  // Fade in inicial al montar
+  useEffect(() => {
+    setHasLoaded(true);
+  }, []);
 
   // Reset fade-out state on location change (nueva ruta)
   useEffect(() => {
@@ -23,16 +29,26 @@ function App() {
 
   return (
     <div>
-      <BackgroundView />
-      <Breadcrumb onNavigate={handleNavigate} />
-      <Fade
-        isExiting={isExiting}
-        onExited={() => {
-          if (nextUrl) navigate(nextUrl);
-        }}
-      >
-        <Outlet />
-      </Fade>
+      {hasLoaded ? (
+        <Fade>
+          <BackgroundView />
+        </Fade>
+      ) : null}
+      {hasLoaded ? (
+        <Fade>
+          <Breadcrumb onNavigate={handleNavigate} />
+        </Fade>
+      ) : null}
+      {hasLoaded && (
+        <Fade
+          isExiting={isExiting}
+          onExited={() => {
+            if (nextUrl) navigate(nextUrl);
+          }}
+        >
+          <Outlet />
+        </Fade>
+      )}
     </div>
   );
 }
