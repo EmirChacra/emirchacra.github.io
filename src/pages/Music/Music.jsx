@@ -17,7 +17,6 @@ function Music() {
 
     return (
         <Fade as="div" className="music">
-
             <InfoDisplay item={selectedCover}/>
             <SlideImages data={fullDataMusic} onSlideChange={onSlideChange}/>
         </Fade>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useLocation, Link } from 'react-router';
+import { useLocation } from 'react-router';
 import './Breadcrumb.css';
 
-function Breadcrumb() {
+function Breadcrumb({ onNavigate }) {
     const paths = useLocation();
     const [path, setPath] = useState('');
 
@@ -15,7 +15,9 @@ function Breadcrumb() {
         if (path.length === 0) return null;
         return (
             <div className='breadcrumb'>
-                <p> <Link to={'/'}>home</Link> / {path}</p>
+                <p>
+                    <a href="#" onClick={e => { e.preventDefault(); if (typeof onNavigate === 'function') onNavigate('/'); }}>home</a> / {path}
+                </p>
             </div>
         )
     }
