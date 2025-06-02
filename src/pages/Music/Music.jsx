@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from 'framer-motion';
+import Fade from '../../components/Fade/Fade';
 import { dataMusic } from "../../helpers/dataMusic";
 import InfoDisplay from "./components/InfoDisplay/InfoDisplay";
 import SlideImages from "./components/SlideImages/SlideImages";
@@ -16,19 +16,12 @@ function Music() {
     }
 
     return (
-        <motion.div
-            className="music"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-        >
+        <Fade as="div" className="music">
+
             <InfoDisplay item={selectedCover}/>
             <SlideImages data={fullDataMusic} onSlideChange={onSlideChange}/>
-        </motion.div>
+        </Fade>
     );
 }
 
 export default Music;
-
-

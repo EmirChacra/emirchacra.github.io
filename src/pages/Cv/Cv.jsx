@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import Fade from '../../components/Fade/Fade';
 import "../../styles/Sectionsv2.css";
 // import cvpdf from "../../assets/cv.pdf";
 import Education from "./components/Education";
@@ -13,14 +13,7 @@ import Collapsible from "../../components/Collapsible/Collapsible";
 function CV() {
     return (
         <>
-            <motion.section
-                className="section-container"
-                style={{ padding: "1dvh 15dvh" }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-            >
+            <Fade as="section" className="section-container" style={{ padding: "1dvh 15dvh" }} >
                 <Collapsible title={"Education"}>
                     <Education />
                 </Collapsible>
@@ -42,7 +35,7 @@ function CV() {
                 <Collapsible title={"Skills"}>
                     <Skills />
                 </Collapsible>
-            </motion.section>
+            </Fade>
         </>
     );
 }
