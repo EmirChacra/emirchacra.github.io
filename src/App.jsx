@@ -29,16 +29,11 @@ function App() {
 
   return (
     <div>
-      {hasLoaded ? (
-        <Fade>
-          <BackgroundView />
-        </Fade>
-      ) : null}
-      {hasLoaded ? (
-        <Fade>
-          <Breadcrumb onNavigate={handleNavigate} />
-        </Fade>
-      ) : null}
+      <Fade>
+        <BackgroundView />
+      </Fade>
+
+      <Breadcrumb onNavigate={handleNavigate} />
       {hasLoaded && (
         <Fade
           isExiting={isExiting}

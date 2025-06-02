@@ -1,84 +1,76 @@
-.breadcrumb
-{
-    margin: 1dvh 2dvh;
-    padding: 1dvh 1dvh;
+.breadcrumb {
+  padding: 1dvh 2dvh;
+  font-size: 1.7rem;
+  height: 100%;
+  background-color: aqua;
+  z-index: 1000;
+
+  p {
     font-size: 1.7rem;
-    height: 5dvh;
+    font-weight: 300;
+    color: var(--purple-color);
+    margin: 0;
 
-    p
-    {
-        font-size: 1.7rem;
-        font-weight: 300;
-        color: var(--purple-color);
-        margin: 0;
+    a {
+      text-decoration: none;
+      color: var(--purple-color);
+      position: relative;
 
-        a
-        {
-            text-decoration: none;
-            color: var(--purple-color);
-            position: relative;
-
-            &:hover
-            {
-                &::after
-                {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    bottom: -2px;
-                    width: 100%;
-                    height: 1px;
-                    background-color: var(--purple-color);
-                    transform: scaleX(1);
-                    transition: transform 0.3s ease-in-out;
-                }
-            }
-
-            &::after
-            {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -2px;
-                width: 100%;
-                height: 1px;
-                background-color: var(--purple-color);
-                transform: scaleX(0);
-                transition: transform 0.3s ease-in-out;
-            }
+      &:hover {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 1px;
+          background-color: var(--purple-color);
+          transform: scaleX(1);
+          transition: transform 0.3s ease-in-out;
         }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background-color: var(--purple-color);
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
     }
+  }
 }
 
-
-@media (width > 768px)
-{
-    .breadcrumb
-    {
-
-        p
-        {
-            
-            font-size: 2rem;
-        }
-    }
-
-
+span {
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--purple-color);
 }
 
+@media (width > 768px) {
+  .breadcrumb {
+    p {
+      font-size: 2rem;
+    }
+  }
 
+  span {
+    font-size: 2rem;
+  }
+}
 
-@media (width > 1224px)
-{
-
-    .breadcrumb
-    {
-
-        p
-        {
-            font-size: 2.3rem;
-        }
+@media (width > 1224px) {
+  .breadcrumb {
+    p {
+      font-size: 2.3rem;
     }
 
-
+    span {
+      font-size: 2.3rem;
+    }
+  }
 }

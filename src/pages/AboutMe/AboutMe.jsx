@@ -4,10 +4,7 @@ import cvpdf from "../../assets/cv.pdf";
 import biopic from "../../assets/biopic.jpg";
 import Fade from "../../components/Fade/Fade";
 
-
 function AboutMe() {
-
-
   return (
     <Fade as="section" className="section-container">
       <div className="flex-container">

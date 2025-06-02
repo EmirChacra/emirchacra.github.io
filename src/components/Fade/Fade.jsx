@@ -1,6 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion";
+import "./Fade.css";
 
-function Fade({ children, as = "div", className = "", isExiting = false, onExited, transition, ...props }) {
+function Fade({
+  children,
+  as = "div",
+  className = "fade",
+  isExiting = false,
+  onExited,
+  transition,
+  ...props
+}) {
   const MotionTag = motion[as] || motion.div;
   return (
     <AnimatePresence mode="wait" onExitComplete={onExited}>

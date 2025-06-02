@@ -1,12 +1,9 @@
 #root {
-  max-width: 100dvw;
   padding: 0%;
   margin: 0 auto;
   /* text-align: center; */
 }
 
-@media ( width >= 1200px){
-  #root{
-    max-width: 100dvw;
-  }
+body {
+  max-width: 100dvw;
 }

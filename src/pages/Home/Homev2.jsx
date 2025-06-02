@@ -134,13 +134,7 @@ function Homev2() {
   };
 
   return (
-    <Fade
-      as="div"
-      className="landing-container"
-      style={{ height: "100vh", overflow: "hidden" }}
-    >
-      <h1 className="landing-title">emir chacra</h1>
-
+    <Fade as="div" className="landing-container">
       {tags.map((tag, index) => (
         <NavLink
           key={index}
