@@ -17,31 +17,7 @@
     transition: font-size 1s ease;
   }
 
-  .collapsible {
-    cursor: pointer;
-    width: 100%;
-    outline: none;
 
-    margin: 0rem 0rem;
-    padding: 0rem 0rem;
-
-    text-align: left;
-    font-family: var(--primary-font);
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--primary-color);
-    transition: font-size 1s ease;
-  }
-
-  .active,
-  .collapsible:hover {
-    text-decoration: none;
-  }
-
-  .collapsible-content {
-    transition: height 1s ease-out;
-    overflow: hidden;
-  }
 
   .flex-container {
     display: flex;

@@ -1,4 +1,3 @@
-import "../../../styles/Sectionsv2.css";
 function Education() {
     return (
 

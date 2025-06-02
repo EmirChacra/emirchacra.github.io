@@ -1,0 +1,21 @@
+.cv-container {
+  position: relative;
+  background: transparent;
+  min-height: 70vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5em 1em 5em 2em;
+
+}
+
+@media (width > 768px) {
+  .cv-container {
+    padding: 5em 5em 5em 2em;
+  }
+}
+
+@media (width > 1224px) {
+  .cv-container {
+    padding: 5em 5em 5em 2em;
+  }
+}

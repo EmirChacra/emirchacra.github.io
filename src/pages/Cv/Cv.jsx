@@ -1,6 +1,5 @@
-import Fade from '../../components/Fade/Fade';
-import "../../styles/Sectionsv2.css";
-// import cvpdf from "../../assets/cv.pdf";
+import Fade from "../../components/Fade/Fade";
+import "./Cv.css";
 import Education from "./components/Education";
 import ResearchExperience from "./components/ResearchExperience";
 import Publications from "./components/Publications";
@@ -11,33 +10,33 @@ import Skills from "./components/Skills";
 import Collapsible from "../../components/Collapsible/Collapsible";
 
 function CV() {
-    return (
-        <>
-            <Fade as="section" className="section-container" >
-                <Collapsible title={"Education"}>
-                    <Education />
-                </Collapsible>
-                <Collapsible title={"Research experience"}>
-                    <ResearchExperience />
-                </Collapsible>
-                <Collapsible title={"Publications"}>
-                    <Publications />
-                </Collapsible>
-                <Collapsible title={"Teaching experience"}>
-                    <TeachingExperience />
-                </Collapsible>
-                <Collapsible title={"Audio Engineering"}>
-                    <AudioEngineering />
-                </Collapsible>
-                <Collapsible title={"Bassist"}>
-                    <Bassist />
-                </Collapsible>
-                <Collapsible title={"Skills"}>
-                    <Skills />
-                </Collapsible>
-            </Fade>
-        </>
-    );
+  return (
+    <>
+      <Fade as="main" className="cv-container">
+        <Collapsible title={"Education"}>
+          <Education />
+        </Collapsible>
+        <Collapsible title={"Research experience"}>
+          <ResearchExperience />
+        </Collapsible>
+        <Collapsible title={"Publications"}>
+          <Publications />
+        </Collapsible>
+        <Collapsible title={"Teaching experience"}>
+          <TeachingExperience />
+        </Collapsible>
+        <Collapsible title={"Audio Engineering"}>
+          <AudioEngineering />
+        </Collapsible>
+        <Collapsible title={"Bassist"}>
+          <Bassist />
+        </Collapsible>
+        <Collapsible title={"Skills"}>
+          <Skills />
+        </Collapsible>
+      </Fade>
+    </>
+  );
 }
 
 export default CV;
