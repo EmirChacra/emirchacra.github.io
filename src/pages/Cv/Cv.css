@@ -6,16 +6,46 @@
   box-sizing: border-box;
   padding: 5em 1em 5em 2em;
 
+  ul {
+    a {
+      text-decoration: none;
+      color: var(--purple-color);
+    }
+    li {
+      font-size: 1.2rem;
+      font-weight: 200;
+    }
+  }
 }
 
 @media (width > 768px) {
   .cv-container {
-    padding: 5em 5em 5em 2em;
+    padding: 5em 5em 5em 4em;
+
+    h4 {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    b {
+      font-weight: 400;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    ul {
+      li {
+        font-size: 1.4rem;
+        font-weight: 200;
+      }
+    }
   }
 }
 
 @media (width > 1224px) {
   .cv-container {
-    padding: 5em 5em 5em 2em;
+    padding: 5em 5em 5em 6em;
   }
 }
