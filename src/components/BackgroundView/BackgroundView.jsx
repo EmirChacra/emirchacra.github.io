@@ -6,6 +6,7 @@ import hbg3 from "../../assets/backgrounds/h3.jpg";
 import wbg1 from "../../assets/backgrounds/w1.jpg";
 import wbg2 from "../../assets/backgrounds/w2.jpg";
 import wbg3 from "../../assets/backgrounds/w3.jpg";
+import "./Background.css";
 
 function BackgroundView() {
   const [containerWidth, setContainerWidth] = useState(window.innerWidth);
@@ -60,17 +61,7 @@ function BackgroundView() {
       className="background-container"
       style={{
         backgroundImage: `url(${bgImg})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "top center",
         opacity: path === "" ? 0.5 : 0.1,
-        minHeight: "100dvh",
-        position: "fixed",
-        top: 0,
-        left: 0,
-        zIndex: -10,
-        overflow: "hidden",
-        transition: "opacity 1.5s ease",
       }}
     ></div>
   );

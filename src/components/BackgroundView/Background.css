@@ -1,0 +1,14 @@
+.background-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  overflow: hidden;
+  transition: opacity 1.5s ease;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}

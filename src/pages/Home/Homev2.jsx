@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
 import Fade from "../../components/Fade/Fade";
 import "./Homev2.css";
-import "../../styles/Background.css";
 
 function Homev2() {
   const [containerWidth, setContainerWidth] = useState(window.innerWidth);
