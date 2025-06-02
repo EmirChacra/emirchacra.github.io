@@ -1,7 +1,7 @@
 .landing-container {
   position: relative;
   width: auto;
-  height: calc(100dvh - 86.22px);
+  height: 100dvh;
   overflow: hidden;
 
   background: transparent;

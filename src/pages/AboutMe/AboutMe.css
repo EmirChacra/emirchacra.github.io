@@ -1,0 +1,8 @@
+.aboutme-container {
+  display: flex;
+  /* height: 100dvh; */
+  /* background-color: var(--primary-color); */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

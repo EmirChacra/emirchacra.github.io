@@ -1,13 +1,13 @@
 import LinkedButton from "../../components/LinkedButton/LinkedButton";
-import "../../styles/Sectionsv2.css";
 import cvpdf from "../../assets/cv.pdf";
 import biopic from "../../assets/biopic.jpg";
 import Fade from "../../components/Fade/Fade";
+import "./AboutMe.css";
 
 function AboutMe() {
   return (
-    <Fade as="section" className="section-container">
-      <div className="flex-container">
+    <Fade as="section" className="aboutme-container">
+      <div className="about-content">
         <div className="text-container">
           <p>
             I'm Emir Chacra, a music producer, bass player, and audio DSP
@@ -26,7 +26,7 @@ function AboutMe() {
           <br />
           {/* Ejemplo de navegación animada: */}
         </div>
-        <img className="img" src={biopic} alt="Bio Pic" />
+        {/* <img className="img" src={biopic} alt="Bio Pic" /> */}
       </div>
     </Fade>
   );

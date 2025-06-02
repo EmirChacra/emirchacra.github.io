@@ -13,7 +13,7 @@ import Collapsible from "../../components/Collapsible/Collapsible";
 function CV() {
     return (
         <>
-            <Fade as="section" className="section-container" style={{ padding: "1dvh 15dvh" }} >
+            <Fade as="section" className="section-container" >
                 <Collapsible title={"Education"}>
                     <Education />
                 </Collapsible>
