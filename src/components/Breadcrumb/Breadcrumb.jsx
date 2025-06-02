@@ -13,48 +13,47 @@ function Breadcrumb({ onNavigate }) {
   }, [paths.pathname]);
   const showPath = (path) => {
     return (
-      <div
-        className="breadcrumb"
-        style={{ position: "relative", minHeight: "2.5em" }}
-      >
-        <AnimatePresence mode="wait" initial={false}>
-          {path.length <= 0 ? (
-            <motion.p
-              key="brand"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-              style={{ position: "absolute", width: "100%" }}
-            >
-              emir chacra
-            </motion.p>
-          ) : (
-            <motion.p
-              key="crumbs"
-              style={{
-                textWrap: "nowrap",
-                position: "absolute",
-                width: "100%",
-              }}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-            >
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (typeof onNavigate === "function") onNavigate("/");
-                }}
+      <div className="breadcrumb-container">
+        <div className="breadcrumb">
+          <AnimatePresence mode="wait" initial={false}>
+            {path.length <= 0 ? (
+              <motion.p
+                key="brand"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+                style={{ position: "absolute", width: "100%" }}
               >
-                home
-              </a>{" "}
-              / <span style={{ display: "inline-block" }}>{path}</span>
-            </motion.p>
-          )}
-        </AnimatePresence>
+                emir chacra
+              </motion.p>
+            ) : (
+              <motion.p
+                key="crumbs"
+                style={{
+                  textWrap: "nowrap",
+                  position: "absolute",
+                  width: "100%",
+                }}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+              >
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (typeof onNavigate === "function") onNavigate("/");
+                  }}
+                >
+                  home
+                </a>{" "}
+                / <span style={{ display: "inline-block" }}>{path}</span>
+              </motion.p>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     );
   };
