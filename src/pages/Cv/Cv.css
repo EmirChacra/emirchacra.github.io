@@ -9,7 +9,12 @@
 
   h4 {
     font-size: calc(var(--p-size-sm) - 0.2rem);
-    font-weight: 400;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: calc(var(--h-size-sm) - 0.2rem);
+    font-weight: 300;
   }
 
   ul {
@@ -27,11 +32,11 @@
 
 @media (width > 768px) {
   .cv-container {
-    padding: 5rem 5rem 5rem 4rem;
+    padding: 9rem 5rem 5rem 4rem;
     font-size: var(--h-size-md);
 
     h3 {
-      font-size: var(--h-size-md);
+      font-size: calc(var(--h-size-md) - 0.2rem);
     }
 
     h4 {
@@ -53,7 +58,7 @@
     padding: 8rem 5rem 5rem 6rem;
 
     h3 {
-      font-size: var(--h-size-lg);
+      font-size: calc(var(--h-size-lg) - 0.2rem);
     }
 
     h4 {

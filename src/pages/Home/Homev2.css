@@ -19,7 +19,7 @@
   .tag {
     position: absolute;
     border-radius: 3px;
-    font-size: var(--p-size-sm);
+    font-size: var(--h-size-sm);
     text-decoration: none;
     color: var(--primary-color);
     mix-blend-mode: difference;
@@ -28,7 +28,7 @@
   }
 
   .tag:hover {
-    font-size: calc(var(--p-size-sm) + 0.4rem);
+    font-size: calc(var(--h-size-sm) + 0.2rem);
     color: var(--purple-color);
     mix-blend-mode: normal;
   }
@@ -41,11 +41,11 @@
     }
 
     .tag {
-      font-size: var(--p-size-md);
+      font-size: var(--h-size-md);
     }
 
     .tag:hover {
-      font-size: calc(var(--p-size-md) + 0.3rem);
+      font-size: calc(var(--h-size-md) + 0.2rem);
     }
   }
 }
@@ -59,11 +59,11 @@
     }
 
     .tag {
-      font-size: var(--p-size-lg);
+      font-size: var(--h-size-lg);
     }
 
     .tag:hover {
-      font-size: calc(var(--p-size-lg) + 0.4rem);
+      font-size: calc(var(--h-size-lg) + 0.2rem);
     }
   }
 }
