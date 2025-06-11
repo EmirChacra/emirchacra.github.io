@@ -5,4 +5,77 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2dvh;
+    max-width: 90%;
+    margin-top: 7dvh;
+    font-weight: 200;
+
+    .text-container {
+      p {
+        font-size: var(--p-size-sm);
+      }
+    }
+
+    img {
+      width: 80%;
+    }
+
+    a{
+      font-size: var(--p-size-sm);
+    }
+  }
+}
+
+@media (width > 768px) {
+  .aboutme-container {
+    .about-content {
+      .text-container {
+        p {
+          font-size: var(--p-size-md);
+        }
+      }
+
+      img {
+        width: 50dvh;
+        max-width: 60%;
+      }
+
+      a {
+        font-size: var(--p-size-md);
+      }
+    }
+  }
+}
+
+@media (width > 1224px) {
+  .aboutme-container {
+    margin-top: 0;
+    padding: 0 50px;
+    height: 100dvh;
+    .about-content {
+      max-width: 1400px;
+
+      flex-direction: row;
+      .text-container {
+        p {
+          font-size: var(--p-size-lg);
+        }
+      }
+
+      img {
+        width: 50dvh;
+        max-width: 40%;
+      }
+
+      a {
+        font-size: var(--p-size-lg);
+      }
+    }
+  }
 }

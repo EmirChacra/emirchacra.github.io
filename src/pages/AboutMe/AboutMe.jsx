@@ -24,9 +24,8 @@ function AboutMe() {
           <LinkedButton link={cvpdf} text="Download CV" />
           <br />
           <br />
-          {/* Ejemplo de navegación animada: */}
         </div>
-        {/* <img className="img" src={biopic} alt="Bio Pic" /> */}
+        <img className="img" src={biopic} alt="Bio Pic" />
       </div>
     </Fade>
   );

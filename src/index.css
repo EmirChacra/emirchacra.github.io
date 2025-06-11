@@ -17,8 +17,15 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --port-view-m: 768px;
-  --port-view-l: 1224px;
+  /* Sizes Of Text */
+  --h-size-sm: 1.7rem;
+  --p-size-sm: 1.5rem;
+
+  --h-size-md: 2rem;
+  --p-size-md: 1.7rem;
+
+  --h-size-lg: 2.3rem;
+  --p-size-lg: 1.9rem;
 }
 
 body {

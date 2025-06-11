@@ -11,7 +11,7 @@
     position: absolute;
     margin: 2dvh 3dvh;
     font-family: var(--primary-font);
-    font-size: 1.7rem;
+    font-size: var(--h-size-sm);
     font-weight: 300;
     transition: font-size 1s ease;
   }
@@ -19,7 +19,7 @@
   .tag {
     position: absolute;
     border-radius: 3px;
-    font-size: 1.4rem;
+    font-size: var(--p-size-sm);
     text-decoration: none;
     color: var(--primary-color);
     mix-blend-mode: difference;
@@ -28,7 +28,7 @@
   }
 
   .tag:hover {
-    font-size: 1.7rem;
+    font-size: calc(var(--p-size-sm) + 0.4rem);
     color: var(--purple-color);
     mix-blend-mode: normal;
   }
@@ -37,15 +37,15 @@
 @media (width > 768px) {
   .landing-container {
     .landing-title {
-      font-size: 2rem;
+      font-size: var(--h-size-md);
     }
 
     .tag {
-      font-size: 1.7rem;
+      font-size: var(--p-size-md);
     }
 
     .tag:hover {
-      font-size: 2rem;
+      font-size: calc(var(--p-size-md) + 0.3rem);
     }
   }
 }
@@ -55,15 +55,15 @@
     background-size: cover;
 
     .landing-title {
-      font-size: 2.3rem;
+      font-size: var(--h-size-lg);
     }
 
     .tag {
-      font-size: 1.9rem;
+      font-size: var(--p-size-lg);
     }
 
     .tag:hover {
-      font-size: 2.3rem;
+      font-size: calc(var(--p-size-lg) + 0.4rem);
     }
   }
 }
