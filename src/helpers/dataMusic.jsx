@@ -17,7 +17,7 @@ export const dataMusic = [
   },
   {
     img: panoramas,
-    title: "Panoramas - monocromo (LP, 2023)",
+    title: "panoramas - monocromo (LP, 2023)",
     description: (
       <div className="text-container">
         <p>Self-released.</p>
@@ -29,7 +29,7 @@ export const dataMusic = [
   },
   {
     img: ambientes,
-    title: "Ambientes - monocromo (EP, 2022)",
+    title: "ambientes - monocromo (EP, 2022)",
     description: (
       <div className="text-container">
         <p>Self-released.</p>
@@ -41,7 +41,7 @@ export const dataMusic = [
   },
   {
     img: neonatologia,
-    title: "Neonatología - Nuevalengua (LP, 2018)",
+    title: "neonatología - nuevalengua (LP, 2018)",
     description: (
       <div className="text-container">
         <p>Self-released.</p>

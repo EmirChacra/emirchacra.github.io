@@ -3,6 +3,7 @@
     position: relative;
     display: flex;
     max-width: 60dvw;
+    padding-bottom: 3dvh;
 }
 
 .img-slider{
