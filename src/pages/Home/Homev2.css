@@ -67,3 +67,22 @@
     }
   }
 }
+
+
+@media (width > 1910px) {
+  .landing-container {
+    background-size: cover;
+
+    .landing-title {
+      font-size: var(--h-size-xl);
+    }
+
+    .tag {
+      font-size: var(--h-size-xl);
+    }
+
+    .tag:hover {
+      font-size: calc(var(--h-size-xl) + 0.2rem);
+    }
+  }
+}

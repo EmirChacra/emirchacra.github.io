@@ -84,3 +84,17 @@ span {
     font-size: var(--h-size-lg);
   }
 }
+
+@media (width > 1910px) {
+  .breadcrumb-container {
+    .breadcrumb {
+      p {
+        font-size: var(--h-size-xl);
+      }
+    }
+  }
+
+  span {
+    font-size: var(--h-size-xl);
+  }
+}

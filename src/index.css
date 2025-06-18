@@ -24,8 +24,11 @@
   --h-size-md: 2.8rem;
   --p-size-md: 2.3rem;
 
-  --h-size-lg: 2.7rem;
-  --p-size-lg: 2.4rem;
+  --h-size-lg: 2rem;
+  --p-size-lg: 2rem;
+
+  --h-size-xl: 2.8rem;
+  --p-size-xl: 2.5rem;
 }
 
 body {
