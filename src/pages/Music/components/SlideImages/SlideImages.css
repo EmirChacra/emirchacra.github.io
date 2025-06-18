@@ -2,7 +2,7 @@
 {
     position: relative;
     display: flex;
-    max-width: 60dvw;
+    max-width: 20rem;
     padding-bottom: 3dvh;
 }
 
@@ -40,7 +40,7 @@
 
     .slide-images
     {
-        max-width: 40dvw;
+        max-width: 25rem;
     }
 
 }
@@ -49,6 +49,14 @@
 {
     .slide-images
     {
-        max-width: 25dvw;
+        max-width: 20rem;
+    }
+}
+
+@media (width > 2024px)
+{
+    .slide-images
+    {
+        max-width: 25rem;
     }
 }

@@ -12,6 +12,7 @@ function InfoDisplay(item) {
                 initial={{ opacity: 0 }} 
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
+                className='info-display-container'
                 transition={{ duration: 0.3 }} >
                     <div className="info-display">
                         <div className="content-info-display">
