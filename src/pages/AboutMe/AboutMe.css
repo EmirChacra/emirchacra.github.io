@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
 
   .about-content {
     display: flex;
@@ -26,7 +27,7 @@
       width: 80%;
     }
 
-    a{
+    a {
       font-size: var(--p-size-sm);
     }
   }
@@ -59,7 +60,6 @@
     padding: 0 50px;
     height: 100dvh;
     .about-content {
-      max-width: 1400px;
 
       flex-direction: row;
       .text-container {
@@ -75,6 +75,31 @@
 
       a {
         font-size: var(--p-size-lg);
+      }
+    }
+  }
+}
+
+@media (width > 2024px) {
+  .aboutme-container {
+    margin-top: 0;
+    padding: 0 50px;
+    height: 100dvh;
+    .about-content {
+      flex-direction: row;
+      .text-container {
+        p {
+          font-size: var(--p-size-xl);
+        }
+      }
+
+      img {
+        width: 50dvh;
+        max-width: 40%;
+      }
+
+      a {
+        font-size: var(--p-size-xl);
       }
     }
   }
