@@ -33,17 +33,19 @@ function App() {
         <BackgroundView />
       </Fade>
 
-      <Breadcrumb onNavigate={handleNavigate} />
-      {hasLoaded && (
-        <Fade
-          isExiting={isExiting}
-          onExited={() => {
-            if (nextUrl) navigate(nextUrl);
-          }}
-        >
-          <Outlet />
-        </Fade>
-      )}
+      <div style={{maxWidth: "2040px", margin: "auto"}}>
+        <Breadcrumb onNavigate={handleNavigate} />
+        {hasLoaded && (
+          <Fade
+            isExiting={isExiting}
+            onExited={() => {
+              if (nextUrl) navigate(nextUrl);
+            }}
+          >
+            <Outlet />
+          </Fade>
+        )}
+      </div>
     </div>
   );
 }
