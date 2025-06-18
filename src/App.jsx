@@ -33,7 +33,7 @@ function App() {
         <BackgroundView />
       </Fade>
 
-      <div style={{maxWidth: "2040px", margin: "auto"}}>
+      <div style={{ maxWidth: "2040px", margin: "auto", position: "relative" }}>
         <Breadcrumb onNavigate={handleNavigate} />
         {hasLoaded && (
           <Fade
