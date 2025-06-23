@@ -3,6 +3,7 @@
   top: 0;
   height: 3em;
   padding: 1dvh 2dvh;
+  min-width: 80%;
 
   .breadcrumb {
     font-size: var(--h-size-sm);

@@ -62,3 +62,14 @@ body {
 ::-webkit-scrollbar-thumb:active {
   background-color: #ff97fd99;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  transition: font-size 2s;
+}
