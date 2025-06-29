@@ -21,10 +21,13 @@
       gap: 20px;
       width: 100%;
 
-      .img {
+      .image-container {
         width: 15rem;
-        max-width: 50%;
-        border-radius: 1%;
+        .img {
+          width: 100%;
+          height: 100%;
+          border-radius: 1%;
+        }
       }
 
       .content-info-display {
@@ -80,22 +83,33 @@
   }
 }
 
-@media (width > 768px) {
+@media (width > 650px) {
   .music {
     justify-content: space-between;
 
     .info-display-container {
+      /* width: 100%; */
       .info-display {
         flex-direction: column;
-        .img {
-          margin-top: 2rem;
-          width: 40%;
-          max-width: 100rem;
+
+        .image-container {
+          width: 30%;
+          max-width: 15rem;
+          margin-top: 0rem;
+
+          .img {
+            width: 100%;
+            height: 100%;
+          }
         }
 
         .content-info-display {
+    
+    
+          margin: 0 auto;
           .title {
             font-size: var(--p-size-md);
+            margin-bottom: 0px;
           }
 
           .button-container {
@@ -135,12 +149,20 @@
         flex-direction: row-reverse;
         justify-content: center;
         gap: 2rem;
-        .img {
+
+        .image-container {
           margin-top: 2rem;
           width: 25%;
+          max-width: 50rem;
+
+          .img {
+            width: 100%;
+            height: 100%;
+          }
         }
 
         .content-info-display {
+          margin: 0;
           width: fit-content;
           .title {
             font-size: var(--p-size-lg);
@@ -172,11 +194,17 @@
 
 @media (width > 2024px) {
   .music {
-
     .info-display-container {
       .info-display {
-        .img {
-          width: 30%;
+        .image-container {
+          margin-top: 2rem;
+          width: 30%; 
+          max-width: 100rem;
+
+          .img {
+            width: 100%;
+            height: 100%;
+          }
         }
 
         .content-info-display {
@@ -204,4 +232,3 @@
     }
   }
 }
-
