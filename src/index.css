@@ -19,16 +19,16 @@
 
   /* Sizes Of Text */
   --h-size-sm: 1.7rem;
-  --p-size-sm: 1.4rem;
+  --p-size-sm: 1.2rem;
 
   --h-size-md: 1.9rem;
-  --p-size-md: 1.7rem;
+  --p-size-md: 1.4rem;
 
   --h-size-lg: 2rem;
-  --p-size-lg: 2rem;
+  --p-size-lg: 1.4rem;
 
   --h-size-xl: 2.8rem;
-  --p-size-xl: 2.5rem;
+  --p-size-xl: 2.0rem;
 }
 
 body {

@@ -4,14 +4,14 @@
     text-decoration: none;
     font-weight: 300;
     font-size: 1.1rem;
-    border: 1px solid transparent; 
+    border: 1px solid var(--purple-color); 
     transition: border-color 0.3s ease-in-out;
     color: var(--default-color, black); 
 }
 
 .button:hover {
     border-color: currentColor; 
-    animation: hover-animation 0.3s ease-in-out;
+    /* animation: hover-animation 0.3s ease-in-out; */
     cursor: pointer;
 }
 

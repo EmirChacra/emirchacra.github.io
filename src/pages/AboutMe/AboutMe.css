@@ -25,10 +25,15 @@
 
     img {
       width: 80%;
+      max-width: 250px;
     }
 
     a {
+      margin-top: 10rem;
       font-size: var(--p-size-sm);
+    }
+    .button-container {
+      margin-top: 2rem;
     }
   }
 }
@@ -43,8 +48,8 @@
       }
 
       img {
-        width: 50dvh;
-        max-width: 60%;
+        width: 80%;
+        max-width: 400px;
       }
 
       a {
