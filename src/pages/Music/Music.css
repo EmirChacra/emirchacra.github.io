@@ -109,12 +109,7 @@
             margin-bottom: 0px;
           }
 
-          .button-container {
-          }
-
           .text-container {
-            h4 {
-            }
 
             p {
               margin: 13px 0px;
@@ -165,12 +160,7 @@
             font-size: var(--p-size-lg);
           }
 
-          .button-container {
-          }
-
           .text-container {
-            h4 {
-            }
 
             p {
               margin: 15px 0px;
@@ -207,9 +197,6 @@
         .content-info-display {
           .title {
             font-size: var(--p-size-xl);
-          }
-
-          .button-container {
           }
 
           .text-container {
