@@ -95,7 +95,6 @@
         flex-direction: column;
 
         .image-container {
-
           margin-top: 0rem;
 
           .img {
@@ -104,8 +103,6 @@
         }
 
         .content-info-display {
-    
-    
           margin: 0 auto;
           .title {
             font-size: var(--p-size-md);
@@ -198,7 +195,7 @@
       .info-display {
         .image-container {
           margin-top: 2rem;
-          width: 30%; 
+          width: 30%;
           max-width: 100rem;
 
           .img {
