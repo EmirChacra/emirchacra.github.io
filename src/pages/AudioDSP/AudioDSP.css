@@ -1,0 +1,99 @@
+.audio-dsp-container {
+  position: relative;
+  background: transparent;
+  padding: 0 22px;
+  padding-top: 40px;
+}
+
+.audio-dsp-img {
+  width: 40dvh;
+  border-radius: 1%;
+}
+
+.audio-dsp-title {
+  text-align: left;
+  font-family: var(--primary-font);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--purple-color);
+  transition: font-size 1s ease;
+}
+
+.audio-dsp-flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-dsp-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5dvh;
+}
+
+.audio-dsp-text-container {
+  color: var(--primary-color);
+  text-align: left;
+  font-family: var(--primary-font);
+  font-size: 1.1rem;
+  font-weight: 200;
+  transition: font-size 1s ease;
+}
+
+.audio-dsp-text-container h4 {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.audio-dsp-text-container b {
+  font-weight: 300;
+}
+
+.audio-dsp-text-container a {
+  color: var(--purple-color);
+}
+
+@media (width > 768px) {
+  .audio-dsp-img {
+    width: 50dvh;
+  }
+  .audio-dsp-title {
+    font-size: 2.1rem;
+  }
+  .audio-dsp-text-container {
+    font-size: 1.5rem;
+  }
+  .audio-dsp-text-container h4 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (width > 1224px) {
+  .audio-dsp-img {
+    width: 60dvh;
+  }
+  .audio-dsp-title {
+    font-size: 2.4rem;
+  }
+  .audio-dsp-flex-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: calc(100dvh - 86.22px);
+  }
+  .audio-dsp-text-container {
+    font-size: 1.8rem;
+    flex: 1;
+    max-width: 50%;
+  }
+  .audio-dsp-text-container h4 {
+    font-size: 1.9rem;
+  }
+  .audio-dsp-button-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
