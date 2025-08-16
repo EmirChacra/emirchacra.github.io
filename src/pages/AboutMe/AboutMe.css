@@ -24,8 +24,13 @@
     }
 
     img {
-      width: 80%;
-      max-width: 250px;
+      width: 250px;
+      height: 250px;
+      border-radius: 3%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      background: #eee;
+      display: block;
     }
 
     a {
@@ -48,8 +53,8 @@
       }
 
       img {
-        width: 80%;
-        max-width: 400px;
+        width: 350px;
+        height: 350px;
       }
 
       a {
