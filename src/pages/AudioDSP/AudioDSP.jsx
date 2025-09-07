@@ -6,7 +6,6 @@ function AudioDSP() {
     return (
         <Fade as="section" className="audio-dsp-container">
             <Reverb />
-            <Reverb />
         </Fade>
     );
 }
