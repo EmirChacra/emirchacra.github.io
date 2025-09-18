@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Fade from '../../components/Fade/Fade';
 import { dataMusic } from "../../helpers/dataMusic";
 import InfoDisplay from "./components/InfoDisplay/InfoDisplay";
 import SlideImages from "./components/SlideImages/SlideImages";
@@ -15,15 +16,11 @@ function Music() {
     }
 
     return (
-
-        <div className="music">
+        <Fade as="div" className="music">
             <InfoDisplay item={selectedCover}/>
             <SlideImages data={fullDataMusic} onSlideChange={onSlideChange}/>
-        </div>
-
+        </Fade>
     );
 }
 
 export default Music;
-
-

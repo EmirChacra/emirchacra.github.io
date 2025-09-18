@@ -1,95 +1,88 @@
-.landing-container
-{
-    position: relative;
-    width: auto;
-    height: 100dvh;
-    overflow: hidden;
+.landing-container {
+  position: relative;
+  width: auto;
+  height: 100dvh;
+  overflow: hidden;
 
-    background: transparent;
+  background: transparent;
 
+  .landing-title {
+    color: var(--purple-color);
+    position: absolute;
+    margin: 2dvh 3dvh;
+    font-family: var(--primary-font);
+    font-size: var(--h-size-sm);
+    font-weight: 300;
+    transition: font-size 1s ease;
+  }
 
+  .tag {
+    position: absolute;
+    border-radius: 3px;
+    font-size: var(--h-size-sm);
+    text-decoration: none;
+    color: var(--primary-color);
+    mix-blend-mode: difference;
+    font-weight: 300;
+    transition: font-size 1s ease, color 0.2s ease;
+  }
 
-    .landing-title
-    {
-        color: var(--purple-color);
-        position: absolute;
-        margin: 2dvh 3dvh;
-        font-family: var(--primary-font);
-        font-size: 1.7rem;
-        font-weight: 300;
-        transition: font-size 1s ease;
+  .tag:hover {
+    font-size: calc(var(--h-size-sm) + 0.2rem);
+    color: var(--purple-color);
+    mix-blend-mode: normal;
+  }
+}
+
+@media (width > 768px) {
+  .landing-container {
+    .landing-title {
+      font-size: var(--h-size-md);
     }
 
-    .tag
-    {
-        position: absolute;
-        border-radius: 3px;
-        font-size: 1.4rem;
-        text-decoration: none;
-        color: var(--primary-color);
-        mix-blend-mode: difference;
-        font-weight: 300;
-        transition: font-size 1s ease, color 0.2s ease;
+    .tag {
+      font-size: var(--h-size-md);
     }
 
-    .tag:hover
-    {   
-        font-size: 1.7rem;
-        color: var(--purple-color);
-        mix-blend-mode: normal;
+    .tag:hover {
+      font-size: calc(var(--h-size-md) + 0.2rem);
     }
+  }
+}
+
+@media (width > 1224px) {
+  .landing-container {
+    background-size: cover;
+
+    .landing-title {
+      font-size: var(--h-size-lg);
+    }
+
+    .tag {
+      font-size: var(--h-size-lg);
+    }
+
+    .tag:hover {
+      font-size: calc(var(--h-size-lg) + 0.2rem);
+    }
+  }
 }
 
 
+@media (width > 2024px) {
+  .landing-container {
+    background-size: cover;
 
-@media (width > 768px) 
-{
-    .landing-container
-    {
-
-        .landing-title
-        {
-            font-size: 2.0rem;
-        }
-
-        .tag
-        {
-            font-size: 1.7rem;
-        }
-
-        .tag:hover
-        {
-            font-size: 2.0rem;
-        }
+    .landing-title {
+      font-size: var(--h-size-xl);
     }
 
-}
-
-
-
-@media (width > 1224px)
-{
-
-    .landing-container
-    {
-        background-size: cover;
-
-        .landing-title
-        {
-            font-size: 2.3rem;
-        }
-
-        .tag
-        {
-            font-size: 1.9rem;
-        }
-
-        .tag:hover
-        {
-            font-size: 2.3rem;
-        }
-
+    .tag {
+      font-size: var(--h-size-xl);
     }
 
-
+    .tag:hover {
+      font-size: calc(var(--h-size-xl) + 0.2rem);
+    }
+  }
 }

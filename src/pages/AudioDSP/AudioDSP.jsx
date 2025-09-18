@@ -1,13 +1,12 @@
-import "../../styles/Background.css";
+import Fade from '../../components/Fade/Fade';
 import Reverb from "./components/Reverb";
+import './AudioDSP.css';
 
 function AudioDSP() {
-
     return (
-        <section className="section-container">
+        <Fade as="section" className="audio-dsp-container">
             <Reverb />
-            <Reverb />
-        </section>
+        </Fade>
     );
 }
 

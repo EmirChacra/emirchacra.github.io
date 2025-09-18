@@ -1,215 +1,163 @@
-.section-container{
-    margin: 1dvh 2dvh;
-    padding: 1dvh 1dvh;
-    position:relative;
-    background: transparent;
+.section-container {
+  padding: 5em 5em;
+  position: relative;
+  background: transparent;
 
-    .img
-    {
-        width: 40dvh;
-        border-radius: 2%;
+  .img {
+    width: 40dvh;
+    border-radius: 1%;
+  }
+
+  .title {
+    text-align: left;
+    font-family: var(--primary-font);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--purple-color);
+    transition: font-size 1s ease;
+  }
+
+
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5dvh;
+  }
+
+  .text-container {
+    color: var(--primary-color);
+    text-align: left;
+    font-family: var(--primary-font);
+    font-size: 1.1rem;
+    font-weight: 200;
+    transition: font-size 1s ease;
+
+    h4 {
+      font-size: 1.3rem;
+      font-weight: 300;
     }
 
-    .title
-    {
-        text-align: left;
-        font-family: var(--primary-font);
-        font-size: 1.8rem;
-        font-weight: 300;
-        color: var(--purple-color);
-        transition: font-size 1s ease;
+    b {
+      font-weight: 300;
+    }
+
+    a {
+      color: var(--purple-color);
+    }
+  }
+}
+
+@media (width > 768px) {
+  .section-container {
+    .img {
+      width: 50dvh;
+    }
+
+    .title {
+      font-size: 2.1rem;
+    }
+
+    .subtitle {
+      font-size: 1.8rem;
     }
 
     .collapsible {
-        cursor: pointer;
-        width: 100%;
-        outline: none;
-
-        margin: 0rem 0rem;
-        padding: 0rem 0rem;
-
-        text-align: left;
-        font-family: var(--primary-font);
-        font-size: 1.5rem;
-        font-weight: 300;
-        color: var(--primary-color);
-        transition: font-size 1s ease;
+      font-size: 1.8rem;
     }
-    
-    .active, .collapsible:hover {
-        text-decoration: none;
+
+    .active,
+    .collapsible:hover {
     }
 
     .collapsible-content {
-        transition: height 1.0s ease-out;
-        overflow: hidden;
     }
 
-    
-
-    .flex-container{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items: center;
+    .collapsible.active + .collapsible-content {
     }
 
-    .button-container{
-        display: flex;
-        flex-direction:row;
-        justify-content: center;
-        gap: 5dvh;
+    .text-container {
+      font-size: 1.5rem;
+
+      h4 {
+        font-size: 1.6rem;
+      }
+
+      b {
+      }
+
+      a {
+      }
     }
-
-    .text-container
-    {
-        color: var(--primary-color);
-        text-align: left;
-        font-family: var(--primary-font);
-        font-size: 1.1rem;
-        font-weight: 200;
-        transition: font-size 1s ease;
-
-        h4
-        {
-            font-size: 1.3rem;
-            font-weight: 300;
-        }
-
-        b
-        {
-            font-weight: 300;
-        }
-
-        a
-        {
-            color: var(--purple-color);
-        }
-    }
+  }
 }
 
-@media (width > 768px)
-{
+@media (width > 1224px) {
+  .section-container {
+    .img {
+      width: 60dvh;
+    }
 
-    .section-container{
-    
-        .img
-        {
-            width: 50dvh;
-        }
-    
-        .title
-        {
-            font-size: 2.1rem;
-        }
-    
-        .subtitle
-        {
-            font-size: 1.8rem;
-        }
-    
-        .collapsible {
-            font-size: 1.8rem;
-        }
-        
-        .active, .collapsible:hover {
-        }
-    
-        .collapsible-content {
-        }
-    
-        .collapsible.active + .collapsible-content {
-        }
-    
-        .text-container
-        {
-            font-size: 1.5rem;
-    
-            h4
-            {
-                font-size: 1.6rem;
-            }
-    
-            b
-            {
-            }
-    
-            a
-            {
-            }
-        }
-    }  
+    .title {
+      font-size: 2.4rem;
+    }
 
-}
+    .subtitle {
+      font-size: 2.1rem;
+    }
 
-@media (width > 1224px)
-{
+    .collapsible {
+      font-size: 2.1rem;
+    }
 
-    .section-container{
+    .active,
+    .collapsible:hover {
+    }
 
-        .imgs
-        {
-            width: 60dvh;
-        }
-    
-        .title
-        {
-            font-size: 2.4rem;
-        }
-    
-        .subtitle
-        {
-            font-size: 2.1rem;
-        }
-    
-        .collapsible {
-            font-size: 2.1rem;
-        }
-        
-        .active, .collapsible:hover {
-        }
-    
-        .collapsible-content {
-        }
-    
-        .collapsible.active + .collapsible-content {
-        }
+    .collapsible-content {
+    }
 
-        .flex-container{
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            height: 88dvh;
+    .collapsible.active + .collapsible-content {
+    }
 
-            .text-container{
-                flex: 1;
-                max-width: 50%;
-            }
-        }
+    .flex-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      height: calc(100dvh - 86.22px);
 
-        .button-container{
-            flex-direction: column;
-            justify-content: center;
-        }
-    
-        .text-container
-        {
-            font-size: 1.8rem;
-    
-            h4
-            {
-                font-size: 1.9rem;
-            }
-    
-            b
-            {
-            }
-    
-            a
-            {
-            }
-        }
-    }  
+      .text-container {
+        flex: 1;
+        max-width: 50%;
+      }
+    }
 
+    .button-container {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-container {
+      font-size: 1.8rem;
+
+      h4 {
+        font-size: 1.9rem;
+      }
+
+      b {
+      }
+
+      a {
+      }
+    }
+  }
 }

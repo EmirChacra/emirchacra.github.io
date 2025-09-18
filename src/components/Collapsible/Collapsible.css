@@ -1,0 +1,23 @@
+.collapsible {
+  cursor: pointer;
+  width: fit-content;
+  outline: none;
+  margin: 0rem 0rem;
+  padding: 0rem 0rem;
+  text-align: left;
+  font-family: var(--primary-font);
+  font-weight: 300;
+  color: var(--primary-color);
+  transition: font-size 1s ease;
+  display: inline-block;
+}
+
+.active,
+.collapsible:hover {
+  text-decoration: none;
+}
+
+.collapsible-content {
+  transition: height 1s ease-out;
+  overflow: hidden;
+}

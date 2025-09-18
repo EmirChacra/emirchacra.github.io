@@ -1,9 +1,217 @@
-.music
-{
-    height: calc(100dvh - 100px);
+.music {
+  height: 100dvh;
+  justify-content: space-between;
+  gap: 2dvh;
+  padding: 0 2dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .info-display-container {
+    height: 85%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10dvh;
-    justify-content: center;
+    .info-display {
+      background-color: transparent;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+
+      .image-container {
+        .img {
+          width: 200px;
+          height: 200px;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          background: #eee;
+          border-radius: 1%;
+        }
+      }
+
+      .content-info-display {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        width: 100%;
+
+        .title {
+          text-align: left;
+          font-family: var(--primary-font);
+          font-size: var(--p-size-sm);
+          font-weight: 300;
+          color: var(--purple-color);
+          transition: font-size 1s ease;
+        }
+
+        .button-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 5dvh;
+        }
+
+        .text-container {
+          object-fit: contain;
+          color: var(--primary-color);
+          flex-direction: column;
+          font-family: var(--primary-font);
+          font-size: var(--p-size-sm);
+          font-weight: 200;
+          transition: font-size 1s ease;
+
+          h4 {
+            font-size: calc(var(--p-size-sm) - 50px);
+            font-weight: 300;
+          }
+
+          b {
+            font-weight: 300;
+          }
+          p {
+            margin: 5px 0px;
+            font-size: calc(var(--p-size-sm) - 3px);
+          }
+
+          a {
+            color: var(--purple-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width > 650px) {
+  .music {
+    justify-content: space-between;
+
+    .info-display-container {
+      /* width: 100%; */
+      .info-display {
+        flex-direction: column;
+
+        .image-container {
+          margin-top: 0rem;
+
+          .img {
+            width: 200px;
+          }
+        }
+
+        .content-info-display {
+          margin: 0 auto;
+          .title {
+            font-size: var(--p-size-md);
+            margin-bottom: 0px;
+          }
+
+          .text-container {
+            p {
+              margin: 13px 0px;
+
+              font-size: calc(var(--p-size-md) - 3px);
+            }
+
+            a {
+              p {
+                font-size: calc(var(--p-size-md) - 3px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width > 1224px) {
+  .music {
+    justify-content: space-between;
+    align-items: center;
+
+    .info-display-container {
+      .info-display {
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 2rem;
+
+        .image-container {
+          margin-top: 2rem;
+          width: 25%;
+          max-width: 50rem;
+
+          .img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .content-info-display {
+          margin: 0;
+          width: fit-content;
+          .title {
+            font-size: var(--p-size-lg);
+          }
+
+          .text-container {
+            p {
+              margin: 15px 0px;
+              font-size: calc(var(--p-size-lg) - 3px);
+            }
+
+            a {
+              p {
+                font-size: calc(var(--p-size-lg) - 3px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width > 2024px) {
+  .music {
+    .info-display-container {
+      .info-display {
+        .image-container {
+          margin-top: 2rem;
+          width: 30%;
+          max-width: 100rem;
+
+          .img {
+            width: 100%;
+            height: 100%;
+            max-width: 750px;
+          }
+        }
+
+        .content-info-display {
+          .title {
+            font-size: var(--p-size-xl);
+          }
+
+          .text-container {
+            p {
+              margin: 15px 0px;
+              font-size: calc(var(--p-size-xl) - 3px);
+            }
+
+            a {
+              p {
+                font-size: calc(var(--p-size-xl) - 3px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

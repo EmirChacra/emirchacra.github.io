@@ -1,5 +1,3 @@
-import "../../../styles/Sectionsv2.css";
-
 function Bassist() {
 
     return (

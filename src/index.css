@@ -1,6 +1,4 @@
-:root
-{
-
+:root {
   --primary-font: "Kanit";
   --secondary-font: "Work Sans", serif;
 
@@ -19,14 +17,59 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --port-view-m: 768px;
-  --port-view-l: 1224px;
+  /* Sizes Of Text */
+  --h-size-sm: 1.7rem;
+  --p-size-sm: 1.2rem;
 
+  --h-size-md: 1.9rem;
+  --p-size-md: 1.4rem;
+
+  --h-size-lg: 2rem;
+  --p-size-lg: 1.4rem;
+
+  --h-size-xl: 2.8rem;
+  --p-size-xl: 2.0rem;
 }
 
-body
-{
+body {
+  max-width: 100%;
   margin: 0;
-  min-width: 320px;
-  min-height: calc(100dvh - 40.8px);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+  opacity: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--purple-color);
+  border-radius: 10px;
+  /* border: 2px solid transparent; */
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff97fdcc;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #ff97fd99;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  transition: font-size 2s;
 }
