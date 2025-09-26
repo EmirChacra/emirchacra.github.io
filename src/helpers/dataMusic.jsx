@@ -12,10 +12,12 @@ export const dataMusic = [
         <p>Self-released.</p>
         <p>Producer and mixing engineer as <i>monocromo</i>.</p>
         <p>Master engineer - <a href="https://holzmasters.com">Francisco Holzmann</a></p>
-        <a className="button-container" 
-          href="https://mncrmo.bandcamp.com/album/early-riser">
-          Listen on Bandcamp
-        </a> 
+        <iframe style= {{border: 0, width: "100%", height: "42px"}}
+        src="https://bandcamp.com/EmbeddedPlayer/album=990244918/size=small/bgcol=333333/linkcol=ff97fd/artwork=none/transparent=true/" seamless>
+          <a href="https://mncrmo.bandcamp.com/album/early-riser">
+          early riser by monocromo
+          </a>
+        </iframe>
       </div>
     )
   },
@@ -28,10 +30,12 @@ export const dataMusic = [
         <p>Producer and mixing engineer as <i>monocromo</i>.</p>
         <p> Bass player as <i>Emir Chacra</i></p>
         <p>Master engineer - <a href="https://www.instagram.com/elgaboaraya/">Gabo Araya</a></p>
-        <a className="button-container"
-          href="https://mncrmo.bandcamp.com/album/panoramas-ambientes-deluxe">
-          Listen on Bandcamp
-        </a> 
+        <iframe style={{border: 0, width: "100%", height: "42px"}}
+        src="https://bandcamp.com/EmbeddedPlayer/album=3265618316/size=small/bgcol=333333/linkcol=ff97fd/artwork=none/transparent=true/" seamless>
+          <a href="https://mncrmo.bandcamp.com/album/panoramas-ambientes-deluxe">
+            Panoramas (Ambientes Deluxe) by monocromo
+          </a>
+        </iframe>
       </div>
     )
   },
@@ -44,10 +48,12 @@ export const dataMusic = [
         <p>Producer and mixing engineer as <i>monocromo</i>.</p>
         <p> Bass player as <i>Emir Chacra</i></p>
         <p>Master engineer - <a href="https://www.instagram.com/elgaboaraya/">Gabo Araya</a></p>
-        <a className="button-container"
-          href="https://mncrmo.bandcamp.com/album/ambientes">
-          Listen on Bandcamp
-        </a>
+        <iframe style={{border: 0, width: "100%", height: "42px"}} 
+        src="https://bandcamp.com/EmbeddedPlayer/album=3365080940/size=small/bgcol=333333/linkcol=ff97fd/artwork=none/transparent=true/" seamless>
+          <a href="https://mncrmo.bandcamp.com/album/ambientes">
+            Ambientes by monocromo
+          </a>
+        </iframe>
       </div>
     )
   },
