@@ -57,7 +57,11 @@ function Breadcrumb({ onNavigate }) {
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             >
-              <span className="home-hover-area">
+              <span
+                className="home-hover-area"
+                onMouseEnter={() => setIsHoveringRoute(true)}
+                onMouseLeave={() => setIsHoveringRoute(false)}
+              >
                 <a
                   href="#"
                   onClick={(e) => {
@@ -67,42 +71,36 @@ function Breadcrumb({ onNavigate }) {
                 >
                   home
                 </a>{" "}
-                / <span
-                  style={{ display: "inline-block" }}
-                  onMouseEnter={() => setIsHoveringRoute(true)}
-                  onMouseLeave={() => setIsHoveringRoute(false)}
-                >
-                  {path}
-                  {/* show expanded menu only on hover over route */}
-                  {isHoveringRoute && (
-                    <motion.ul
-                      className="crumb-menu"
-                      initial={{ opacity: 0, y: -6 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -6 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {otherRoutes.map((r) => (
-                        <motion.li
-                          key={r.id}
-                          className="crumb-item"
-                          whileHover={{ scale: 1.02 }}
+                / <span style={{ display: "inline-block" }}>{path}</span>
+                {/* show expanded menu only on hover over the whole block */}
+                {isHoveringRoute && (
+                  <motion.ul
+                    className="crumb-menu"
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {otherRoutes.map((r) => (
+                      <motion.li
+                        key={r.id}
+                        className="crumb-item"
+                        whileHover={{ scale: 1.02 }}
+                      >
+                        <a
+                          href={r.path}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleNavigate(r.path);
+                          }}
+                          style={{ color: "inherit", textDecoration: "none" }}
                         >
-                          <a
-                            href={r.path}
-                            onClick={(e) => {
-                              e.preventDefault();
-                              handleNavigate(r.path);
-                            }}
-                            style={{ color: "inherit", textDecoration: "none" }}
-                          >
-                            {r.label}
-                          </a>
-                        </motion.li>
-                      ))}
-                    </motion.ul>
-                  )}
-                </span>
+                          {r.label}
+                        </a>
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                )}
               </span>
             </motion.p>
           )}
