@@ -1,3 +1,8 @@
+/* Wrapper para hover de breadcrumb y menú */
+.breadcrumb-hover-wrapper {
+  position: relative;
+  display: inline-block;
+}
 /* Breadcrumb container styles */
 .breadcrumb-container
 {

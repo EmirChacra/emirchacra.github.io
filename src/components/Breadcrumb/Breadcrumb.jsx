@@ -19,7 +19,6 @@ function Breadcrumb({ onNavigate }) {
     { id: "cv", label: "cv", path: "/cv" },
     { id: "music", label: "music", path: "/music" },
     { id: "audio.dsp", label: "audio.dsp", path: "/audio.dsp" },
-    { id: "media", label: "media", path: "/media" },
   ];
 
   // Exclude current route and 'home' from menu
@@ -58,49 +57,54 @@ function Breadcrumb({ onNavigate }) {
               transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             >
               <span
-                className="home-hover-area"
+                className="breadcrumb-hover-wrapper"
                 onMouseEnter={() => setIsHoveringRoute(true)}
                 onMouseLeave={() => setIsHoveringRoute(false)}
+                style={{ position: "relative", display: "inline-block" }}
               >
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigate("/");
-                  }}
-                >
-                  home
-                </a>{" "}
-                / <span style={{ display: "inline-block" }}>{path}</span>
-                {/* show expanded menu only on hover over the whole block */}
-                {isHoveringRoute && (
-                  <motion.ul
-                    className="crumb-menu"
-                    initial={{ opacity: 0, y: -6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.2 }}
+                <span className="home-hover-area">
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigate("/");
+                    }}
                   >
-                    {otherRoutes.map((r) => (
-                      <motion.li
-                        key={r.id}
-                        className="crumb-item"
-                        whileHover={{ scale: 1.02 }}
-                      >
-                        <a
-                          href={r.path}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            handleNavigate(r.path);
-                          }}
-                          style={{ color: "inherit", textDecoration: "none" }}
+                    home
+                  </a>{" "}
+                  / <span style={{ display: "inline-block" }}>{path}</span>
+                </span>
+                {/* show expanded menu only on hover over the wrapper */}
+                <AnimatePresence>
+                  {isHoveringRoute && (
+                    <motion.ul
+                      className="crumb-menu"
+                      initial={{ opacity: 0, y: -6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -6 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {otherRoutes.map((r) => (
+                        <motion.li
+                          key={r.id}
+                          className="crumb-item"
+                          whileHover={{ scale: 1.02 }}
                         >
-                          {r.label}
-                        </a>
-                      </motion.li>
-                    ))}
-                  </motion.ul>
-                )}
+                          <a
+                            href={r.path}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              handleNavigate(r.path);
+                            }}
+                            style={{ color: "inherit", textDecoration: "none" }}
+                          >
+                            {r.label}
+                          </a>
+                        </motion.li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
               </span>
             </motion.p>
           )}
