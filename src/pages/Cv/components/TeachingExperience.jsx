@@ -13,10 +13,11 @@ function TeachingExperience() {
             <ul>
                 <li><b>UC San Diego:</b>
                     <ul>
-                        <li>MUS 172: Computer Music II. Spring 2024 (1 quarter).</li>
-                        <li>MUS 171: Computer Music I. Fall 2023, Winter 2025 (2 quarters).</li>
-                        <li>MUS 170: Art of Sound. Fall 2024 (1 quarter).</li>
-                        <li>MUS 17: Hip Hop. Winter 2024 (1 quarter)</li>
+                        <li>MUS 8 - American Music: Jazz Cultures. Fall 2025 (1 quarter).</li>
+                        <li>MUS 172 - Computer Music II. Spring 2025, Spring 2024 (2 quarters).</li>
+                        <li>MUS 171 - Computer Music I. Winter 2025, Fall 2023 (2 quarters).</li>
+                        <li>MUS 170 - Art of Sound. Fall 2024 (1 quarter).</li>
+                        <li>MUS 17 - Hip Hop. Winter 2024 (1 quarter)</li>
                     </ul>
                 </li>
                 <li><b>Universidad de Chile:</b>
