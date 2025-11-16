@@ -48,58 +48,87 @@ function Linktree() {
             <div className="avatar-placeholder">EC</div>
           </div>
           <h1 className="linktree-name">emir chacra</h1>
-          <p className="linktree-bio">
-            Musician · Producer · Good lawyer
-          </p>
+          <p className="linktree-bio">Musician · Producer · Good lawyer</p>
+
+          <div className="linktree-links">
+            {links.map((link, index) => (
+              <a
+                key={link.id}
+                href={link.url}
+                target={link.url.startsWith("mailto:") ? "_self" : "_blank"}
+                rel={
+                  link.url.startsWith("mailto:") ? "" : "noopener noreferrer"
+                }
+                className={`linktree-link ${
+                  link.type === "social" ? "social-link" : ""
+                }`}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                style={{
+                  transform:
+                    hoveredIndex === index
+                      ? "translateY(-2px)"
+                      : "translateY(0)",
+                  boxShadow:
+                    hoveredIndex === index
+                      ? "0 4px 20px rgba(255, 151, 253, 0.3)"
+                      : "0 2px 8px rgba(0, 0, 0, 0.2)",
+                }}
+              >
+                {link.icon && (
+                  <div className="link-icon">
+                    <img src={link.icon} alt={link.title} />
+                  </div>
+                )}
+                <span className="link-title">{link.title}</span>
+                <svg
+                  className="link-arrow"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 12L10 8L6 4"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            ))}
+          </div>
+          <div className="linktree-social-icons">
+            <a
+              href="https://emirchacra.bandcamp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon-link"
+              aria-label="Bandcamp"
+            >
+              <img src={bandcampIcon} alt="Bandcamp" />
+            </a>
+            <a
+              href="https://www.instagram.com/emirchacra"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon-link"
+              aria-label="Instagram"
+            >
+              <img src={instagramIcon} alt="Instagram" />
+            </a>
+            <a
+              href="mailto:contact@emirchacra.com"
+              className="social-icon-link"
+              aria-label="Email"
+            >
+              <img src={mailIcon} alt="Email" />
+            </a>
+          </div>
         </div>
 
-        <div className="linktree-links">
-          {links.map((link, index) => (
-            <a
-              key={link.id}
-              href={link.url}
-              target={link.url.startsWith("mailto:") ? "_self" : "_blank"}
-              rel={link.url.startsWith("mailto:") ? "" : "noopener noreferrer"}
-              className={`linktree-link ${
-                link.type === "social" ? "social-link" : ""
-              }`}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              style={{
-                transform:
-                  hoveredIndex === index ? "translateY(-2px)" : "translateY(0)",
-                boxShadow:
-                  hoveredIndex === index
-                    ? "0 4px 20px rgba(255, 151, 253, 0.3)"
-                    : "0 2px 8px rgba(0, 0, 0, 0.2)",
-              }}
-            >
-              {link.icon && (
-                <div className="link-icon">
-                  <img src={link.icon} alt={link.title} />
-                </div>
-              )}
-              <span className="link-title">{link.title}</span>
-              <svg
-                className="link-arrow"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 12L10 8L6 4"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </a>
-          ))}
-        </div>
-        
         <div className="linktree-footer">
           <p>© {new Date().getFullYear()} emir chacra</p>
         </div>
