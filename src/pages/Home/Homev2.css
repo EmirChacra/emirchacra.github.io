@@ -38,7 +38,7 @@
     bottom: 2dvh;
     right: 2dvh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     z-index: 10;
   }
