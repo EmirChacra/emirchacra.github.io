@@ -32,7 +32,8 @@
   position: relative;
 }
 
-.breadcrumb a:hover::after {
+
+.crumb-item:hover a::after {
   transform: scaleX(1);
 }
 
