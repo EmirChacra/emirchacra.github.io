@@ -117,20 +117,12 @@ function Breadcrumb({ onNavigate }) {
                               key={r.id}
                               className="crumb-item"
                               whileHover={{ scale: 1.02 }}
+                              onClick={() => handleNavigate(r.path)}
+                              style={{ cursor: "pointer" }}
                             >
-                              <a
-                                href={r.path}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  handleNavigate(r.path);
-                                }}
-                                style={{
-                                  color: "inherit",
-                                  textDecoration: "none",
-                                }}
-                              >
+                              <span style={{ display: "block", width: "100%", height: "100%" }}>
                                 {r.label}
-                              </a>
+                              </span>
                             </motion.li>
                           ))}
                         </motion.ul>
