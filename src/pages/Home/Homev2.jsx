@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
 import Fade from "../../components/Fade/Fade";
+import bandcampIcon from "../../assets/icons/bandcamp-svgrepo-com.svg";
+import instagramIcon from "../../assets/icons/instagram-svgrepo-com.svg";
+import mailIcon from "../../assets/icons/mail-svgrepo-com.svg";
 import "./Homev2.css";
 
 function Homev2() {
@@ -151,6 +154,33 @@ function Homev2() {
           {tag.text}
         </NavLink>
       ))}
+      <div className="social-icons-container">
+        <a
+          href="https://mncrmo.bandcamp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+          aria-label="Bandcamp"
+        >
+          <img src={bandcampIcon} alt="Bandcamp" />
+        </a>
+        <a
+          href="https://www.instagram.com/monocromo._/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+          aria-label="Instagram"
+        >
+          <img src={instagramIcon} alt="Instagram" />
+        </a>
+        <a
+          href="mailto:music@emirchacra.com"
+          className="social-icon"
+          aria-label="Email"
+        >
+          <img src={mailIcon} alt="Email" />
+        </a>
+      </div>
     </Fade>
   );
 }

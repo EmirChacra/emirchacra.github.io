@@ -1,54 +1,111 @@
+/* Wrapper para hover de breadcrumb y menú */
+.breadcrumb-hover-wrapper {
+  position: relative;
+  display: inline-block;
+}
+/* Breadcrumb container styles */
 .breadcrumb-container {
   position: absolute;
   top: 0;
   height: 3em;
   padding: 1dvh 2dvh;
   min-width: 80%;
+}
 
-  .breadcrumb {
-    font-size: var(--h-size-sm);
-    z-index: 1000;
-    position: relative;
-    height: 100%;
-    p {
-      font-size: var(--h-size-sm);
-      font-weight: 300;
-      color: var(--purple-color);
-      margin: 0;
+.breadcrumb {
+  font-size: var(--h-size-sm);
+  z-index: 1000;
+  position: relative;
+  height: 100%;
+}
 
-      a {
-        text-decoration: none;
-        color: var(--purple-color);
-        position: relative;
+.breadcrumb .breadcrumb-content {
+  font-size: var(--h-size-sm);
+  font-weight: 300;
+  color: var(--purple-color);
+  margin: 0;
+}
 
-        &:hover {
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 100%;
-            height: 1px;
-            background-color: var(--purple-color);
-            transform: scaleX(1);
-            transition: transform 0.3s ease-in-out;
-          }
-        }
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--purple-color);
+  position: relative;
+}
 
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -2px;
-          width: 100%;
-          height: 1px;
-          background-color: var(--purple-color);
-          transform: scaleX(0);
-          transition: transform 0.3s ease-in-out;
-        }
-      }
-    }
-  }
+
+.crumb-item:hover a::after {
+  transform: scaleX(1);
+}
+
+.breadcrumb a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--purple-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* expanded menu that appears when hovering home */
+.home-hover-area {
+  position: relative;
+  display: inline-flex;
+  margin-left: 0.6rem;
+  gap: 0.25rem;
+}
+
+.route-hover-area {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.crumb-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+.crumb-menu {
+  list-style: none;
+  margin: 0;
+  padding: 8px 20px 8px 0px;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: -7px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(20, 20, 20, 0.303); /* fondo oscuro */
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.258);
+  align-items: flex-start;
+  pointer-events: auto;
+  z-index: 2000;
+}
+
+.crumb-item {
+  cursor: pointer;
+  color: var(--purple-color);
+  font-weight: 300;
+  padding: 4px 8px;
+}
+.crumb-item {
+  cursor: pointer;
+  color: var(--purple-color);
+  font-weight: 300;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background 0.15s ease, color 0.12s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.crumb-item:hover {
+  background: rgba(128, 80, 200, 0.06);
 }
 
 span {
@@ -58,12 +115,8 @@ span {
 }
 
 @media (width > 768px) {
-  .breadcrumb-container {
-    .breadcrumb {
-      p {
-        font-size: var(--h-size-md);
-      }
-    }
+  .breadcrumb .breadcrumb-content {
+    font-size: var(--h-size-md);
   }
 
   span {
@@ -72,12 +125,8 @@ span {
 }
 
 @media (width > 1224px) {
-  .breadcrumb-container {
-    .breadcrumb {
-      p {
-        font-size: var(--h-size-lg);
-      }
-    }
+  .breadcrumb .breadcrumb-content {
+    font-size: var(--h-size-lg);
   }
 
   span {
@@ -86,12 +135,8 @@ span {
 }
 
 @media (width > 2024px) {
-  .breadcrumb-container {
-    .breadcrumb {
-      p {
-        font-size: var(--h-size-xl);
-      }
-    }
+  .breadcrumb .breadcrumb-content {
+    font-size: var(--h-size-xl);
   }
 
   span {
