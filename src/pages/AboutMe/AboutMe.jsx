@@ -1,6 +1,6 @@
 import LinkedButton from "../../components/LinkedButton/LinkedButton";
 import cvpdf from "../../assets/cv.pdf";
-import biopic from "../../assets/biopic.jpg";
+import biopic from "../../assets/biopic2026.jpg";
 import Fade from "../../components/Fade/Fade";
 import "./AboutMe.css";
 
