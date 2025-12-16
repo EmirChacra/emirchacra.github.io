@@ -81,13 +81,13 @@
 
     .social-icons-container {
       bottom: 3dvh;
-      right: 3dvh;
-      gap: 1.2rem;
+      right: 2dvw;
+      gap: 0.9rem;
     }
 
     .social-icon {
-      width: 36px;
-      height: 36px;
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -139,14 +139,14 @@
     }
 
     .social-icons-container {
-      bottom: 5dvh;
-      right: 5dvh;
-      gap: 2rem;
+      bottom: 3dvh;
+      right: 2dvw;
+      gap: 1rem;
     }
 
     .social-icon {
-      width: 44px;
-      height: 44px;
+      width: 30px;
+      height: 30px;
     }
   }
 }
