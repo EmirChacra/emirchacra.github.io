@@ -1,9 +1,7 @@
 import { useState } from "react";
 import Fade from "../../components/Fade/Fade";
-import bandcampIcon from "../../assets/icons/bandcamp-svgrepo-com.svg";
-import instagramIcon from "../../assets/icons/instagram-svgrepo-com.svg";
-import mailIcon from "../../assets/icons/mail-svgrepo-com.svg";
 import "./Linktree.css";
+import avatar from "../../assets/biopic2026.jpg";
 
 function Linktree() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -11,30 +9,34 @@ function Linktree() {
   const links = [
     {
       id: 1,
-      title: "Bandcamp",
-      url: "https://emirchacra.bandcamp.com",
-      icon: bandcampIcon,
-      type: "social",
+      title: "Perreo Old School DJ Set Preview",
+      url: "https://m.soundcloud.com/mmonocromo/perreo-vieja-escuela-dj-set",
     },
     {
       id: 2,
-      title: "Instagram",
-      url: "https://www.instagram.com/emirchacra",
-      icon: instagramIcon,
-      type: "social",
+      title: "Baile Funk DJ Set Preview",
+      url: "https://m.soundcloud.com/mmonocromo/funk-dj-set",
     },
     {
       id: 3,
-      title: "Email",
-      url: "mailto:contact@emirchacra.com",
-      icon: mailIcon,
-      type: "social",
+      title: "Bandcamp",
+      url: "https://mncrmo.bandcamp.com",
+    },
+    {
+      id: 4,
+      title: "Main Website",
+      url: "https://emirchacra.com",
+    },
+    {
+      id: 5,
+      title: "Contact",
+      url: "mailto:music@emirchacra.com",
     },
     // Add more liks
     // {
     //   id: 4,
     //   title: "Mi Proyecto",
-    //   url: "https://ejemplo.com",
+    //   url: "m.soundcloud.com/mmonocromo/funk-dj-set",
     //   type: "link",
     // },
   ];
@@ -44,89 +46,49 @@ function Linktree() {
       <div className="linktree-content">
         {/* here can be a logo or avatar if wanted */}
         <div className="linktree-header">
-          <div className="linktree-avatar">
-            <div className="avatar-placeholder">EC</div>
-          </div>
-          <h1 className="linktree-name">emir chacra</h1>
-          <p className="linktree-bio">Musician · Producer · Good lawyer</p>
+          <img className="linktree-avatar" src={avatar} alt="Avatar"/>
+          <h1 className="linktree-name">monocromo</h1>
+          <p className="linktree-bio">Music Producer · DJ · DSP Developer</p>
+        </div>
 
-          <div className="linktree-links">
-            {links.map((link, index) => (
-              <a
-                key={link.id}
-                href={link.url}
-                target={link.url.startsWith("mailto:") ? "_self" : "_blank"}
-                rel={
-                  link.url.startsWith("mailto:") ? "" : "noopener noreferrer"
-                }
-                className={`linktree-link ${
-                  link.type === "social" ? "social-link" : ""
-                }`}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                style={{
-                  transform:
-                    hoveredIndex === index
-                      ? "translateY(-2px)"
-                      : "translateY(0)",
-                  boxShadow:
-                    hoveredIndex === index
-                      ? "0 4px 20px rgba(255, 151, 253, 0.3)"
-                      : "0 2px 8px rgba(0, 0, 0, 0.2)",
-                }}
+        <div className="linktree-links">
+          {links.map((link, index) => (
+            <a
+              key={link.id}
+              href={link.url}
+              target={link.url.startsWith("mailto:") ? "_self" : "_blank"}
+              rel={
+                link.url.startsWith("mailto:") ? "" : "noopener noreferrer"
+              }
+              className={`linktree-link`}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              style={{
+                transform:
+                  hoveredIndex === index
+                    ? "translateY(-2px)"
+                    : "translateY(0)",
+              }}
+            >
+              <span className="link-title">{link.title}</span>
+              <svg
+                className="link-arrow"
+                width="15"
+                height="15"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                {link.icon && (
-                  <div className="link-icon">
-                    <img src={link.icon} alt={link.title} />
-                  </div>
-                )}
-                <span className="link-title">{link.title}</span>
-                <svg
-                  className="link-arrow"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 12L10 8L6 4"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
-            ))}
-          </div>
-          <div className="linktree-social-icons">
-            <a
-              href="https://emirchacra.bandcamp.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon-link"
-              aria-label="Bandcamp"
-            >
-              <img src={bandcampIcon} alt="Bandcamp" />
+                <path
+                  d="M6 12L10 8L6 4"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </a>
-            <a
-              href="https://www.instagram.com/emirchacra"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon-link"
-              aria-label="Instagram"
-            >
-              <img src={instagramIcon} alt="Instagram" />
-            </a>
-            <a
-              href="mailto:contact@emirchacra.com"
-              className="social-icon-link"
-              aria-label="Email"
-            >
-              <img src={mailIcon} alt="Email" />
-            </a>
-          </div>
+          ))}
         </div>
 
         <div className="linktree-footer">
