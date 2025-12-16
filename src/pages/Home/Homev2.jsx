@@ -156,7 +156,7 @@ function Homev2() {
       ))}
       <div className="social-icons-container">
         <a
-          href="https://emirchacra.bandcamp.com"
+          href="https://mncrmo.bandcamp.com"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -165,7 +165,7 @@ function Homev2() {
           <img src={bandcampIcon} alt="Bandcamp" />
         </a>
         <a
-          href="https://www.instagram.com/emirchacra"
+          href="https://www.instagram.com/monocromo._/"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
@@ -174,7 +174,7 @@ function Homev2() {
           <img src={instagramIcon} alt="Instagram" />
         </a>
         <a
-          href="mailto:contact@emirchacra.com"
+          href="mailto:music@emirchacra.com"
           className="social-icon"
           aria-label="Email"
         >

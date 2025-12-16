@@ -109,14 +109,14 @@
     }
 
     .social-icons-container {
-      bottom: 4dvh;
-      right: 4dvh;
-      gap: 1.5rem;
+      bottom: 3dvh;
+      right: 2dvw;
+      gap: 0.9rem;
     }
 
     .social-icon {
-      width: 40px;
-      height: 40px;
+      width: 25px;
+      height: 25px;
     }
   }
 }
