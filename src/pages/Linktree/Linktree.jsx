@@ -10,7 +10,7 @@ function Linktree() {
     {
       id: 1,
       title: "Latinx Electrónicx DJ Set Preview",
-      url: "https://m.soundcloud.com/mmonocromo/perreo-vieja-escuela-dj-set",
+      url: "https://soundcloud.com/mmonocromo/latinxelectronicx-dj-set",
     },
     {
       id: 3,
