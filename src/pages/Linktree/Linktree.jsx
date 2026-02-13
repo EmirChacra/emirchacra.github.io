@@ -13,22 +13,27 @@ function Linktree() {
       url: "https://m.soundcloud.com/mmonocromo/perreo-vieja-escuela-dj-set",
     },
     {
+      id: 3,
+      title: "Perreo Old School DJ Set Preview",
+      url: "https://m.soundcloud.com/mmonocromo/perreo-vieja-escuela-dj-set",
+    },
+    {
       id: 2,
       title: "Baile Funk DJ Set Preview",
       url: "https://m.soundcloud.com/mmonocromo/funk-dj-set",
     },
     {
-      id: 3,
+      id: 4,
       title: "Bandcamp",
       url: "https://mncrmo.bandcamp.com",
     },
     {
-      id: 4,
+      id: 5,
       title: "Main Website",
       url: "https://emirchacra.com",
     },
     {
-      id: 5,
+      id: 6,
       title: "Contact",
       url: "mailto:music@emirchacra.com",
     },
