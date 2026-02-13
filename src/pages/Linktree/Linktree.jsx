@@ -9,7 +9,7 @@ function Linktree() {
   const links = [
     {
       id: 1,
-      title: "Perreo Old School DJ Set Preview",
+      title: "Latinx Electrónicx DJ Set Preview",
       url: "https://m.soundcloud.com/mmonocromo/perreo-vieja-escuela-dj-set",
     },
     {
