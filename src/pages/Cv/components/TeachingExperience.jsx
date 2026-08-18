@@ -9,10 +9,18 @@ function TeachingExperience() {
                 <li>UCSD/MCASD Audio Workshops: Beatmaking. Summer 2024.</li>
             </ul>
 
+            <h4>As a guest speaker</h4>
+            <ul>
+                <li>Talk and workshop: <i>Diseño y programación de efectos de audio basados en delay.</i>. Sound Department, Universidad de Chile. Dec 2025.</li>
+                <li>Talk and workshop: <i>What should I do to start designing software or hardware digital audio effects?</i>. Sound Department, Universidad de Chile. Dec 2024.</li>
+            </ul>
+
             <h4>As a teaching assistant</h4>
             <ul>
                 <li><b>UC San Diego:</b>
                     <ul>
+                        <li>MUS 174C - Audio/MIDI Studio Techniques III. Spring 2026 (1 quarter).</li>
+                        <li>MUS 174B - Audio/MIDI Studio Techniques II. Winter 2026 (1 quarter).</li>
                         <li>MUS 8 - American Music: Jazz Cultures. Fall 2025 (1 quarter).</li>
                         <li>MUS 172 - Computer Music II. Spring 2025, Spring 2024 (2 quarters).</li>
                         <li>MUS 171 - Computer Music I. Winter 2025, Fall 2023 (2 quarters).</li>
@@ -28,11 +36,6 @@ function TeachingExperience() {
                         <li>Statistics. Spring 2018 (1 term).</li>
                     </ul>
                 </li>
-            </ul>
-
-            <h4>As a guest speaker</h4>
-            <ul>
-                <li>Talk and workshop: <i>What should I do to start designing software or hardware digital audio effects?</i>. Sound Department, Universidad de Chile (Dec 2024).</li>
             </ul>
         </div>
     );

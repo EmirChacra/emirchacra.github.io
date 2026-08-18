@@ -3,7 +3,12 @@ function Education() {
 
         <div className="text-container">
             <ul>
-                <li>UC San Diego, Ph.D. in Computer Music (09/23 - Ongoing)</li>
+                <li>UC San Diego, Ph.D. in Computer Music (09/23 - Ongoing)
+                    <ul>
+                        <li><b>ABD in May 2026.</b></li>
+                        <li><b>Advisor:</b> Tom Erbe</li>
+                    </ul>
+                </li>
                 <li>Universidad de Chile, M.S. in Applied Mathematics (03/21 - 05/22)
                     <ul>
                         <li><b>Grade:</b> 6.8 out of 7.0 (GPA of 4.0). Graduated with honors.</li>
