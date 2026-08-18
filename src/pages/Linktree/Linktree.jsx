@@ -9,8 +9,13 @@ function Linktree() {
   const links = [
     {
       id: 1,
-      title: "Latinx Electrónicx DJ Set Preview",
-      url: "https://soundcloud.com/mmonocromo/latinxelectronicx-dj-set",
+      title: "monocromo Live, May 1st 2026",
+      url: "https://vimeo.com/1187942956",
+    },
+    {
+      id: 2,
+      title: "Latinx Electrónicx DJ Set",
+      url: "https://soundcloud.com/mmonocromo/latin-club-dj-set-algorave",
     },
     {
       id: 3,
@@ -18,22 +23,22 @@ function Linktree() {
       url: "https://m.soundcloud.com/mmonocromo/perreo-vieja-escuela-dj-set",
     },
     {
-      id: 2,
+      id: 4,
       title: "Baile Funk DJ Set Preview",
       url: "https://m.soundcloud.com/mmonocromo/funk-dj-set",
     },
     {
-      id: 4,
-      title: "Bandcamp",
+      id: 5,
+      title: "monocromo Bandcamp",
       url: "https://mncrmo.bandcamp.com",
     },
     {
-      id: 5,
+      id: 6,
       title: "Main Website",
       url: "https://emirchacra.com",
     },
     {
-      id: 6,
+      id: 7,
       title: "Contact",
       url: "mailto:music@emirchacra.com",
     },
