@@ -9,36 +9,41 @@ function Linktree() {
   const links = [
     {
       id: 1,
+      title: "Latin Electronic DJ Set Aug 2026",
+      url: "https://soundcloud.com/mmonocromo/latin-electronic-dj-set",
+    },
+    {
+      id: 2,
       title: "monocromo Live, May 1st 2026",
       url: "https://vimeo.com/1187942956",
     },
     {
-      id: 2,
-      title: "Latinx Electrónicx DJ Set",
+      id: 3,
+      title: "AlgoRave 2026 Latin Club DJ Set",
       url: "https://soundcloud.com/mmonocromo/latin-club-dj-set-algorave",
     },
     {
-      id: 3,
+      id: 4,
       title: "Perreo Old School DJ Set Preview",
       url: "https://m.soundcloud.com/mmonocromo/perreo-vieja-escuela-dj-set",
     },
     {
-      id: 4,
+      id: 5,
       title: "Baile Funk DJ Set Preview",
       url: "https://m.soundcloud.com/mmonocromo/funk-dj-set",
     },
     {
-      id: 5,
+      id: 6,
       title: "monocromo Bandcamp",
       url: "https://mncrmo.bandcamp.com",
     },
     {
-      id: 6,
+      id: 7,
       title: "Main Website",
       url: "https://emirchacra.com",
     },
     {
-      id: 7,
+      id: 8,
       title: "Contact",
       url: "mailto:music@emirchacra.com",
     },
