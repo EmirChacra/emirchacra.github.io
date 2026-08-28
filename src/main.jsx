@@ -22,7 +22,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="music" element={<Music />} />
           <Route path="audio.dsp" element={<AudioDSP />} />
           <Route path="media" element={<MediaPlayer />} />
-          <Route path="tree" element={<Linktree />} />
+          <Route path="ltree" element={<Linktree />} />
         </Route>
       </Routes>
     </BrowserRouter>
