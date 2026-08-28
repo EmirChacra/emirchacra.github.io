@@ -34,7 +34,7 @@ function App() {
       </Fade>
 
       <div style={{ maxWidth: "2040px", margin: "auto", position: "relative" }}>
-        {location.pathname !== "/ltree" && (
+        {location.pathname !== "/tree" && (
           <Breadcrumb onNavigate={handleNavigate} />
         )}
         {hasLoaded && (
