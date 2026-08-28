@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { Route, Routes, HashRouter } from "react-router";
+import { Route, Routes, BrowserRouter } from "react-router";
 import Homev2 from "./pages/Home/Homev2";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import CV from "./pages/Cv/Cv";
@@ -13,7 +13,7 @@ import Linktree from "./pages/Linktree/Linktree";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/" element={<Homev2 />} />
@@ -25,6 +25,6 @@ createRoot(document.getElementById("root")).render(
           <Route path="tree" element={<Linktree />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>
 );
