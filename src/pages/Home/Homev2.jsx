@@ -174,7 +174,7 @@ function Homev2() {
           <img src={instagramIcon} alt="Instagram" />
         </a>
         <a
-          href="mailto:music@emirchacra.com"
+          href="mailto:hola@monocromo.media"
           className="social-icon"
           aria-label="Email"
         >

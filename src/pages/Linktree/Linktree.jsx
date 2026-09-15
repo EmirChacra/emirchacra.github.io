@@ -45,12 +45,12 @@ function Linktree() {
     {
       id: 8,
       title: "Main Website",
-      url: "https://emirchacra.com",
+      url: "https://monocromo.media",
     },
     {
       id: 9,
       title: "Contact",
-      url: "mailto:music@emirchacra.com",
+      url: "mailto:hola@monocromo.media",
     },
     // Add more liks
     // {
