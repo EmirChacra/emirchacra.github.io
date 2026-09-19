@@ -1,8 +1,8 @@
 .slide-images {
   position: relative;
   display: flex;
-  width:270px;
-  padding-bottom: 3dvh;
+  width: 216px;
+  padding-bottom: 2dvh;
 }
 
 .img-slider {
@@ -31,6 +31,7 @@
 @media (width > 640px) {
   .slide-images {
     width: 360px;
+    padding-bottom: 3dvh;
   }
   .img-slider {
     width: 100%;
@@ -41,6 +42,7 @@
 @media (width > 1080px) {
   .slide-images {
     width: 480px;
+    padding-bottom: 3dvh;
   }
   .img-slider {
     width: 100%;
@@ -51,6 +53,7 @@
 @media (width > 1920px) {
   .slide-images {
     width: 540px;
+    padding-bottom: 3dvh;
   }
   .img-slider {
     width: 100%;

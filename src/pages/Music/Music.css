@@ -26,10 +26,8 @@
       min-height: 420px;
 
       .image-container {
-        width: min(360px, 90dvw);
-        min-width: 270px;
-        min-height: 270px;
-        height: min(360px, 90dvw);
+        width: min(270px, 35dvh);
+        height: min(270px, 35dvh);
         aspect-ratio: 1 / 1;
         display: flex;
         align-items: center;
@@ -110,8 +108,8 @@
 
         .image-container {
           margin-top: 0rem;
-          width: min(450px, 90dvw);
-          height: min(450px, 90dvw);
+          width: min(360px, 40dvh);
+          height: min(360px, 40dvh);
 
           .img {
             width: 100%;
@@ -159,8 +157,8 @@
 
         .image-container {
           margin-top: 2rem;
-          width: min(540px, 90dvw);
-          height: min(540px, 90dvw);
+          width: min(450px, 90dvh);
+          height: min(450px, 90dvh);
 
           .img {
             width: 100%;
@@ -199,15 +197,12 @@
       .info-display {
         .image-container {
           margin-top: 2rem;
-          width: 720px;
-          min-width: 540px;
-          height: 720px;
-          max-width: 100rem;
+          width: min(675px, 90dvh);
+          height: min(675px, 90dvh);
 
           .img {
             width: 100%;
             height: 100%;
-            max-width: 1080px;
           }
         }
 
